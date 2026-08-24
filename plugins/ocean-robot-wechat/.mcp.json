@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "ardot_remote": {
+      "type": "http",
+      "url": "https://ardot.tencent.com/mcp",
+      "default_tools_approval_mode": "writes",
+      "tool_timeout_sec": 120
+    },
+    "wechat_publisher": {
+      "type": "http",
+      "url": "http://127.0.0.1:8000/mcp",
+      "bearer_token_env_var": "MCP_BEARER_TOKEN",
+      "default_tools_approval_mode": "writes",
+      "tool_timeout_sec": 90
+    }
+  }
+}

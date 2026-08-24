@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "policy": {
+    "primary_source": "ardot-native",
+    "search_before_generate": true,
+    "one_dominant_style_per_article": true,
+    "cutout_background": "true-alpha-only",
+    "forbidden_colors_outside_logo": ["#0054A7", "navy", "deep-blue"]
+  },
+  "style_routes": {
+    "recruitment": ["watercolor-cutout", "paper-cut"],
+    "event": ["paper-cut", "editorial-decor"],
+    "popular-science": ["technical-line", "editorial-decor"],
+    "project-update": ["technical-line", "watercolor-cutout"]
+  },
+  "assets": [
+    {"id":"cutout.watercolor.rov-bubble","title":"气泡友好 ROV","kind":"cutout","style":"watercolor-cutout","path":"assets/library/cutout-watercolor/rov-bubble.png","subjects":["rov","机械臂","气泡"],"uses":["recruitment","introduction","training"],"alpha_required":true,"source":"imagegen-edit+chroma-key"},
+    {"id":"cutout.watercolor.thruster-wrench","title":"推进器与扳手","kind":"cutout","style":"watercolor-cutout","path":"assets/library/cutout-watercolor/thruster-wrench.png","subjects":["thruster","推进器","扳手","hardware"],"uses":["training","debugging","hardware"],"alpha_required":true,"source":"imagegen-edit+chroma-key"},
+    {"id":"cutout.watercolor.sonar-fish","title":"机器鱼与声呐波","kind":"cutout","style":"watercolor-cutout","path":"assets/library/cutout-watercolor/sonar-fish.png","subjects":["机器鱼","sonar","声呐","autonomy"],"uses":["popular-science","competition","sensing"],"alpha_required":true,"source":"imagegen+chroma-key"},
+    {"id":"cutout.watercolor.auv-glider","title":"水下滑翔机 AUV","kind":"cutout","style":"watercolor-cutout","path":"assets/library/cutout-watercolor/auv-glider.png","subjects":["auv","glider","水下滑翔机","navigation"],"uses":["popular-science","project-update","robot-profile"],"alpha_required":true,"source":"imagegen+chroma-key"},
+    {"id":"cutout.watercolor.smart-buoy","title":"智能海洋浮标","kind":"cutout","style":"watercolor-cutout","path":"assets/library/cutout-watercolor/smart-buoy.png","subjects":["buoy","浮标","sensor","solar"],"uses":["popular-science","field-test","sensing"],"alpha_required":true,"source":"imagegen+chroma-key"},
+    {"id":"cutout.paper.robotic-arm-sample","title":"纸雕机械臂取样","kind":"cutout","style":"paper-cut","path":"assets/library/cutout-paper/robotic-arm-sample.png","subjects":["机械臂","gripper","取样","coral"],"uses":["recruitment","event","hardware"],"alpha_required":true,"source":"imagegen+chroma-key"},
+    {"id":"cutout.paper.field-test-boat","title":"纸雕外场测试船","kind":"cutout","style":"paper-cut","path":"assets/library/cutout-paper/field-test-boat.png","subjects":["boat","外场","测试","rov","equipment"],"uses":["event","field-test","recruitment"],"alpha_required":true,"source":"imagegen+chroma-key"},
+    {"id":"line.rov","title":"ROV 技术线稿","kind":"icon","style":"technical-line","path":"assets/library/line-technical/rov-outline.svg","subjects":["rov","机械臂","thruster"],"uses":["popular-science","robot-profile","specification"]},
+    {"id":"line.auv","title":"AUV 技术线稿","kind":"icon","style":"technical-line","path":"assets/library/line-technical/auv-outline.svg","subjects":["auv","navigation","glider"],"uses":["popular-science","robot-profile","specification"]},
+    {"id":"line.sonar","title":"声呐技术线稿","kind":"icon","style":"technical-line","path":"assets/library/line-technical/sonar-outline.svg","subjects":["sonar","声呐","sensing","fish"],"uses":["popular-science","sensing","mapping"]},
+    {"id":"line.thruster","title":"推进器技术线稿","kind":"icon","style":"technical-line","path":"assets/library/line-technical/thruster-outline.svg","subjects":["thruster","推进器","propulsion"],"uses":["popular-science","hardware","control"]},
+    {"id":"line.claw","title":"机械臂关节线稿","kind":"icon","style":"technical-line","path":"assets/library/line-technical/claw-outline.svg","subjects":["claw","机械臂","joint","gripper"],"uses":["popular-science","hardware","control"]},
+    {"id":"line.buoy","title":"浮标技术线稿","kind":"icon","style":"technical-line","path":"assets/library/line-technical/buoy-outline.svg","subjects":["buoy","浮标","sensor","waves"],"uses":["popular-science","sensing","field-test"]},
+    {"id":"decor.wave-divider","title":"双层波浪分隔线","kind":"decor","style":"editorial-decor","path":"assets/library/decor-editorial/wave-divider.svg","subjects":["wave","divider","海浪"],"uses":["all","section-break"]},
+    {"id":"decor.bubble-cluster","title":"气泡簇","kind":"decor","style":"editorial-decor","path":"assets/library/decor-editorial/bubble-cluster.svg","subjects":["bubble","气泡"],"uses":["all","corner-accent"]},
+    {"id":"decor.sonar-rings","title":"声呐波纹","kind":"decor","style":"editorial-decor","path":"assets/library/decor-editorial/sonar-rings.svg","subjects":["sonar","声呐","signal"],"uses":["popular-science","section-accent"]},
+    {"id":"decor.circuit-coral","title":"电路珊瑚","kind":"decor","style":"editorial-decor","path":"assets/library/decor-editorial/circuit-coral.svg","subjects":["circuit","coral","电路","珊瑚"],"uses":["recruitment","hardware","corner-accent"]},
+    {"id":"decor.dotted-route","title":"点状航迹线","kind":"decor","style":"editorial-decor","path":"assets/library/decor-editorial/dotted-route.svg","subjects":["route","航迹","navigation"],"uses":["project-update","timeline","section-break"]},
+    {"id":"decor.photo-corners","title":"照片取景角","kind":"decor","style":"editorial-decor","path":"assets/library/decor-editorial/photo-corners.svg","subjects":["photo","frame","corner"],"uses":["recruitment","event","gallery"]}
+  ]
+}

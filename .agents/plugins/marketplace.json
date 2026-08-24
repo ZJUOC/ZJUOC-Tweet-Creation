@@ -1,0 +1,20 @@
+{
+  "name": "zjuoc",
+  "interface": {
+    "displayName": "ZJUOC"
+  },
+  "plugins": [
+    {
+      "name": "ocean-robot-wechat",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ocean-robot-wechat"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Design"
+    }
+  ]
+}

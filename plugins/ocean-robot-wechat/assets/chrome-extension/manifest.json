@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "海洋机器人公众号导入桥",
+  "version": "0.2.0",
+  "description": "把编译后的 wechat.html 导入微信公众号编辑器。",
+  "permissions": [],
+  "host_permissions": ["https://mp.weixin.qq.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://mp.weixin.qq.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["bridge.js"],
+      "matches": ["https://mp.weixin.qq.com/*"]
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "version": 3,
+  "authoring": {
+    "primary": "ardot-native",
+    "html_role": "preview-only",
+    "component_name_prefix": "组件｜"
+  },
+  "brand": {
+    "ink": "#2E4148",
+    "body": "#53666C",
+    "sky": "#6DA7CF",
+    "aqua": "#8CCCD3",
+    "pale": "#EAF7F8",
+    "coral": "#F09A7C",
+    "sand": "#F2D6A2",
+    "foam": "#F7FBFA",
+    "forbidden_outside_logo": ["#0054A7", "navy", "deep-blue"],
+    "logo": "assets/association-logo.jpg"
+  },
+  "components": [
+    {
+      "id": "brand.logo",
+      "kind": "brand",
+      "title": "Association logo",
+      "asset": "assets/association-logo.jpg",
+      "uses": ["header", "footer", "cover-overlay"]
+    },
+    {
+      "id": "spot.bubble-rov",
+      "kind": "spot",
+      "title": "Friendly bubble ROV spot illustration",
+      "asset": "assets/library/cutout-watercolor/rov-bubble.png",
+      "ardot_component_name": "组件｜小插图｜气泡ROV",
+      "aspect_ratio": "1:1",
+      "display_px": "56-104",
+      "uses": ["recruitment", "training", "introduction"]
+    },
+    {
+      "id": "spot.thruster-tools",
+      "kind": "spot",
+      "title": "Thruster and wrench spot illustration",
+      "asset": "assets/library/cutout-watercolor/thruster-wrench.png",
+      "ardot_component_name": "组件｜小插图｜推进器工具",
+      "aspect_ratio": "1:1",
+      "display_px": "56-104",
+      "uses": ["hardware", "training", "debugging"]
+    },
+    {
+      "id": "spot.sonar-fish",
+      "kind": "spot",
+      "title": "Robot fish and sonar spot illustration",
+      "asset": "assets/library/cutout-watercolor/sonar-fish.png",
+      "ardot_component_name": "组件｜小插图｜声呐机器鱼",
+      "aspect_ratio": "1:1",
+      "display_px": "56-104",
+      "uses": ["sonar", "competition", "autonomy"]
+    },
+    {
+      "id": "spot.auv-glider",
+      "kind": "spot",
+      "title": "Underwater glider spot illustration",
+      "asset": "assets/library/cutout-watercolor/auv-glider.png",
+      "ardot_component_name": "组件｜小插图｜水下滑翔机",
+      "aspect_ratio": "1:1",
+      "display_px": "72-160",
+      "uses": ["autonomy", "navigation", "robot-profile", "popular-science"]
+    },
+    {
+      "id": "spot.smart-buoy",
+      "kind": "spot",
+      "title": "Smart buoy spot illustration",
+      "asset": "assets/library/cutout-watercolor/smart-buoy.png",
+      "ardot_component_name": "组件｜小插图｜智能浮标",
+      "aspect_ratio": "1:1",
+      "display_px": "72-160",
+      "uses": ["sensing", "field-test", "popular-science"]
+    },
+    {
+      "id": "spot.robotic-arm-sample",
+      "kind": "spot",
+      "title": "Paper-cut robotic arm sampling scene",
+      "asset": "assets/library/cutout-paper/robotic-arm-sample.png",
+      "ardot_component_name": "组件｜插图｜纸雕机械臂取样",
+      "aspect_ratio": "1:1",
+      "display_px": "160-280",
+      "uses": ["event", "recruitment", "hardware", "sampling"]
+    },
+    {
+      "id": "spot.field-test-boat",
+      "kind": "spot",
+      "title": "Paper-cut field-test boat scene",
+      "asset": "assets/library/cutout-paper/field-test-boat.png",
+      "ardot_component_name": "组件｜插图｜纸雕外场测试船",
+      "aspect_ratio": "1:1",
+      "display_px": "160-320",
+      "uses": ["event", "field-test", "recruitment"]
+    },
+    {
+      "id": "block.key-takeaway",
+      "kind": "block",
+      "title": "Key takeaway",
+      "required_fields": ["label", "summary"]
+    },
+    {
+      "id": "block.metrics",
+      "kind": "block",
+      "title": "Verified metrics",
+      "required_fields": ["items", "sources"]
+    },
+    {
+      "id": "block.robot-spec",
+      "kind": "block",
+      "title": "Robot specification",
+      "required_fields": ["name", "platform_type", "mission", "modules"]
+    },
+    {
+      "id": "block.timeline",
+      "kind": "block",
+      "title": "Project timeline",
+      "required_fields": ["milestones"]
+    },
+    {
+      "id": "block.quote",
+      "kind": "block",
+      "title": "Attributed quote",
+      "required_fields": ["quote", "speaker", "role"]
+    },
+    {
+      "id": "block.references",
+      "kind": "block",
+      "title": "References",
+      "required_fields": ["citations"]
+    },
+    {
+      "id": "block.qr-footer",
+      "kind": "block",
+      "title": "QR call to action footer",
+      "required_fields": ["cta", "description", "qr_asset"]
+    },
+    {
+      "id": "layout.hero-collage",
+      "kind": "layout",
+      "title": "Editorial hero collage",
+      "ardot_component_name": "组件｜首屏｜拼贴标题",
+      "required_fields": ["title", "subtitle", "images"],
+      "uses": ["recruitment", "event", "project-update"]
+    },
+    {
+      "id": "layout.open-text",
+      "kind": "layout",
+      "title": "Open editorial text",
+      "ardot_component_name": "组件｜正文｜开放段落",
+      "required_fields": ["paragraphs"],
+      "uses": ["all"]
+    },
+    {
+      "id": "layout.floating-heading",
+      "kind": "layout",
+      "title": "Floating section heading",
+      "ardot_component_name": "组件｜章节标题｜漂浮标签",
+      "required_fields": ["number", "title"],
+      "uses": ["all"]
+    },
+    {
+      "id": "layout.swipe-gallery",
+      "kind": "layout",
+      "title": "Horizontal swipe gallery",
+      "ardot_component_name": "组件｜滑动图库｜三图",
+      "required_fields": ["images"],
+      "interaction": "overflow-x:auto; visible-next-edge; no-script",
+      "uses": ["recruitment", "event", "project-update"]
+    },
+    {
+      "id": "layout.offset-pair",
+      "kind": "layout",
+      "title": "Offset photo pair",
+      "ardot_component_name": "组件｜照片｜错位双图",
+      "required_fields": ["images"],
+      "uses": ["recruitment", "event", "project-update"]
+    },
+    {
+      "id": "layout.department-river",
+      "kind": "layout",
+      "title": "Department flowing list",
+      "ardot_component_name": "组件｜部门｜流动清单",
+      "required_fields": ["items"],
+      "uses": ["recruitment"]
+    },
+    {
+      "id": "layout.join-steps",
+      "kind": "layout",
+      "title": "Join steps with supplied QR assets",
+      "ardot_component_name": "组件｜加入方式｜三步骤",
+      "required_fields": ["steps"],
+      "uses": ["recruitment", "event"]
+    }
+  ],
+  "recommendations": {
+    "popular-science": [
+      "brand.logo",
+      "spot.sonar-fish",
+      "spot.auv-glider",
+      "spot.smart-buoy",
+      "block.key-takeaway",
+      "block.robot-spec",
+      "block.references"
+    ],
+    "project-update": [
+      "brand.logo",
+      "spot.thruster-tools",
+      "spot.auv-glider",
+      "spot.smart-buoy",
+      "block.metrics",
+      "block.timeline",
+      "block.quote"
+    ],
+    "recruitment": [
+      "brand.logo",
+      "spot.bubble-rov",
+      "spot.thruster-tools",
+      "spot.sonar-fish",
+      "spot.robotic-arm-sample",
+      "spot.field-test-boat",
+      "layout.hero-collage",
+      "layout.open-text",
+      "layout.floating-heading",
+      "layout.swipe-gallery",
+      "layout.offset-pair",
+      "layout.department-river",
+      "layout.join-steps",
+      "block.key-takeaway",
+      "block.timeline",
+      "block.qr-footer"
+    ],
+    "event": [
+      "brand.logo",
+      "spot.robotic-arm-sample",
+      "spot.field-test-boat",
+      "block.key-takeaway",
+      "block.timeline",
+      "block.qr-footer"
+    ]
+  }
+}

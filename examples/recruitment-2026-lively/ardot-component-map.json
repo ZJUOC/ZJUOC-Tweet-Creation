@@ -1,0 +1,66 @@
+{
+  "file_url": "https://ardot.tencent.com/file/718241568273827",
+  "page_id": "10:1",
+  "page_name": "2026纳新推文｜灵动测试版",
+  "article_frame_id": "10:13",
+  "component_library_id": "10:22",
+  "asset_library_frame_id": "23:1",
+  "sections": {
+    "hero": "10:14",
+    "lead": "10:15",
+    "learn": "10:16",
+    "build": "10:17",
+    "together": "10:18",
+    "departments": "10:19",
+    "join": "10:20",
+    "footer": "10:21"
+  },
+  "components": {
+    "layout.floating-heading": "10:24",
+    "layout.swipe-gallery": "10:28",
+    "layout.offset-pair": "10:32",
+    "spot.bubble-rov": "10:37",
+    "spot.thruster-tools": "10:38",
+    "spot.sonar-fish": "10:39",
+    "layout.join-steps": "10:40",
+    "brand.signature": "10:43"
+  },
+  "asset_components": {
+    "cutout.watercolor.rov-bubble": "23:5",
+    "cutout.watercolor.thruster-wrench": "23:6",
+    "cutout.watercolor.sonar-fish": "23:7",
+    "cutout.watercolor.auv-glider": "23:8",
+    "cutout.watercolor.smart-buoy": "23:9",
+    "cutout.paper.robotic-arm-sample": "23:11",
+    "cutout.paper.field-test-boat": "23:12",
+    "line.rov": "23:23",
+    "line.auv": "23:31",
+    "line.sonar": "23:39",
+    "line.thruster": "23:46",
+    "line.claw": "23:55",
+    "line.buoy": "23:63",
+    "decor.wave-divider": "23:67",
+    "decor.bubble-cluster": "23:74",
+    "decor.sonar-rings": "23:78",
+    "decor.circuit-coral": "23:88",
+    "decor.dotted-route": "23:94",
+    "decor.photo-corners": "23:98"
+  },
+  "palette": {
+    "ink": "#2E4148",
+    "body": "#53666C",
+    "sky": "#6DA7CF",
+    "aqua": "#8CCCD3",
+    "pale": "#EAF7F8",
+    "coral": "#F09A7C",
+    "sand": "#F2D6A2",
+    "foam": "#F7FBFA"
+  },
+  "qa": {
+    "section_screenshots_checked": 18,
+    "article_height": 5910,
+    "revision": "compact-unified+true-alpha-assets",
+    "intentional_overlap": ["hero collage", "offset photo pair", "visible next image edge"],
+    "deep_blue_policy": "No deep blue outside protected supplied logo and source imagery"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "status": "pass",
+  "compiler": {
+    "component_count": 20,
+    "swipe_gallery_count": 2,
+    "errors": []
+  },
+  "browser_mobile_390x844": {
+    "article_width": 390,
+    "article_height": 4249,
+    "document_client_width": 390,
+    "document_scroll_width": 390,
+    "component_count": 20,
+    "swipe_count": 2,
+    "swipe_widths": [
+      {"client_width": 368, "scroll_width": 957},
+      {"client_width": 368, "scroll_width": 957}
+    ],
+    "image_count": 16,
+    "broken_images": [],
+    "script_count": 0,
+    "deep_blue_in_inline_styles": false,
+    "department_backgrounds": ["#EAF7F8"],
+    "department_corner_radius": "8px",
+    "console_issues": []
+  },
+  "ardot": {
+    "page_id": "10:1",
+    "article_frame_id": "10:13",
+    "component_library_id": "10:22",
+    "section_screenshots_checked": 18,
+    "article_height": 5910,
+    "revision": "compact-unified",
+    "result": "pass"
+  },
+  "publisher_mcp": {
+    "unit_and_integration_tests": "10 passed",
+    "health_endpoint": "pass",
+    "formal_publish_enabled_during_test": false,
+    "live_wechat_account_test": "not run: credentials and IP allowlist intentionally not requested in chat"
+  }
+}

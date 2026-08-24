@@ -1,0 +1,15 @@
+interface:
+  display_name: "微信远程发布"
+  short_description: "通过受保护的远程 MCP 创建草稿并正式发布微信公众号文章"
+  default_prompt: "使用 $publish-wechat-remote 将这篇文章安全地保存到目标微信公众号草稿箱。"
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "wechat_publisher"
+      description: "Authenticated WeChat Official Account publishing tools"
+      transport: "streamable_http"
+      url: "http://127.0.0.1:8000/mcp"
+
+policy:
+  allow_implicit_invocation: true

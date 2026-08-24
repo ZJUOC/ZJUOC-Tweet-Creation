@@ -1,0 +1,10 @@
+interface:
+  display_name: "海洋机器人公众号"
+  short_description: "自动编排海洋机器人协会公众号文章、品牌配图和可复用视觉组件"
+  icon_small: "./assets/association-logo.jpg"
+  icon_large: "./assets/association-logo.jpg"
+  brand_color: "#8CCCD3"
+  default_prompt: "使用 $ocean-robot-wechat 制作海洋机器人协会公众号推文；先查询组件和素材，选择一套主风格，在 Ardot 中保留原生稿，再输出并检查微信 HTML。"
+
+policy:
+  allow_implicit_invocation: true

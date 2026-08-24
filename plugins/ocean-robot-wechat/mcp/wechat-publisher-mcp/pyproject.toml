@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "wechat-publisher-mcp"
+version = "0.1.0"
+description = "Authenticated remote MCP server for WeChat Official Account publishing"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "HsiangNianian" }]
+dependencies = [
+  "httpx>=0.28.1,<1",
+  "mcp>=1.28.1,<2",
+  "pydantic-settings>=2.10,<3",
+  "uvicorn>=0.35,<1",
+]
+
+[project.urls]
+Homepage = "https://github.com/HsiangNianian/wechat-publisher-mcp"
+Repository = "https://github.com/HsiangNianian/wechat-publisher-mcp"
+Issues = "https://github.com/HsiangNianian/wechat-publisher-mcp/issues"
+
+[project.scripts]
+wechat-publisher-mcp = "wechat_publisher_mcp.__main__:main"
+
+[dependency-groups]
+dev = [
+  "pytest>=8.4,<10",
+  "pytest-asyncio>=1.1,<2",
+  "ruff>=0.12,<1",
+]
+
+[[tool.uv.index]]
+name = "aliyun"
+url = "https://mirrors.aliyun.com/pypi/simple"
+default = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/wechat_publisher_mcp"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
