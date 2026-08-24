@@ -13,6 +13,7 @@ skill=plugins/ocean-robot-wechat/skills/ocean-robot-wechat
 python3 "$skill/scripts/assets.py" list
 python3 "$skill/scripts/assets.py" list --style technical-line
 python3 "$skill/scripts/assets.py" list --style hard-tech
+python3 "$skill/scripts/assets.py" list --style aqua-glass
 python3 "$skill/scripts/assets.py" search "ROV training"
 python3 "$skill/scripts/assets.py" search "机械 推进器 hardware-deep-dive"
 python3 "$skill/scripts/assets.py" recommend project-update --style hard-tech
@@ -27,12 +28,13 @@ python3 "$skill/scripts/assets.py" validate
 - `cutout.mechanical.*`：机械工业真透明 PNG，表达结构、拆解、制造与运维。
 - `cutout.clay.*`：黏土模型真透明 PNG，表达招新、培训和实验室动手体验。
 - `cutout.isometric.*`：等轴工程真透明 PNG，表达任务链、系统关系和测试流程。
+- `cutout.aqua-glass.*`：冰蓝透明真透明 PNG，表达声呐、导航、数据链与未来感知。
 - `line.*`：技术线稿 SVG。
 - `decor.*`：编辑装饰 SVG。
 
 ID 一旦发布应保持稳定。文件路径可以迁移，但必须同步更新注册表。
 
-单篇推文只选一个主风格。`hard-tech` 用于呈现“这套系统能做什么”，`mechanical-industrial` 用于解释“它如何构成、连接、维修或操作”，`clay-miniature` 用于动手学习与实验室参与，`isometric-system` 用于解释多个平台、模块和步骤的关系；技术线稿与编辑装饰可以少量辅助，但不要把触感插画和工程渲染随机混排。
+单篇推文只选一个主风格。`hard-tech` 用于呈现“这套系统能做什么”，`mechanical-industrial` 用于解释“它如何构成、连接、维修或操作”，`clay-miniature` 用于动手学习与实验室参与，`isometric-system` 用于解释多个平台、模块和步骤的关系，`aqua-glass` 用浅冰蓝、白银和透明材质表达声呐与导航；技术线稿与编辑装饰可以少量辅助，但不要把触感插画和工程渲染随机混排。
 
 ## 新增透明切图
 

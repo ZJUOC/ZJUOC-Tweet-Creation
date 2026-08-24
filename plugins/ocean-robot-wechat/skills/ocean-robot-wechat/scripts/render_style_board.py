@@ -19,6 +19,7 @@ STYLE_LABELS = {
     "mechanical-industrial": ("机械工业", "结构、拆解、制造与运维"),
     "clay-miniature": ("黏土模型", "招新、培训与实验室日常"),
     "isometric-system": ("等轴工程", "任务链、系统关系与测试流程"),
+    "aqua-glass": ("冰蓝透明", "声呐、导航、数据链与未来感知"),
 }
 BACKGROUNDS = ["#FFF9F2", "#EAF7F8"]
 

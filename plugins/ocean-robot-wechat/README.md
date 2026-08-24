@@ -11,4 +11,4 @@
 
 `MCP_ALLOW_PUBLISH` 默认关闭。正常工作流只创建草稿；正式群发必须单独确认。
 
-素材库目前提供卡通水彩、纸雕叙事、硬核科技、机械工业、黏土模型、等轴工程、技术线稿和编辑装饰八类。项目进展、感知与竞赛优先选择 `hard-tech`；结构拆解、加工、维修与外场设备优先选择 `mechanical-industrial`；培训和实验室故事可选 `clay-miniature`；系统关系与任务流程可选 `isometric-system`。
+素材库目前提供卡通水彩、纸雕叙事、硬核科技、机械工业、黏土模型、等轴工程、冰蓝透明、技术线稿和编辑装饰九类。项目进展、感知与竞赛优先选择 `hard-tech`；结构拆解、加工、维修与外场设备优先选择 `mechanical-industrial`；培训和实验室故事可选 `clay-miniature`；系统关系与任务流程可选 `isometric-system`；声呐、导航、数据链和未来感知可选不含深蓝的 `aqua-glass`。

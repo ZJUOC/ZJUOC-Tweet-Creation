@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "policy": {
     "primary_source": "ardot-native",
     "search_before_generate": true,
@@ -10,10 +10,10 @@
   "style_routes": {
     "recruitment": ["watercolor-cutout", "clay-miniature", "paper-cut"],
     "event": ["paper-cut", "clay-miniature", "mechanical-industrial"],
-    "popular-science": ["technical-line", "isometric-system", "hard-tech"],
-    "project-update": ["hard-tech", "isometric-system", "mechanical-industrial"],
+    "popular-science": ["technical-line", "aqua-glass", "isometric-system"],
+    "project-update": ["hard-tech", "aqua-glass", "isometric-system"],
     "hardware-deep-dive": ["mechanical-industrial", "isometric-system", "technical-line"],
-    "competition": ["hard-tech", "isometric-system", "technical-line"],
+    "competition": ["hard-tech", "aqua-glass", "isometric-system"],
     "training": ["clay-miniature", "mechanical-industrial", "isometric-system"]
   },
   "assets": [
@@ -36,6 +36,9 @@
     {"id":"cutout.isometric.mission-chain","title":"等轴工程海试任务链","kind":"cutout","style":"isometric-system","path":"assets/library/cutout-isometric/mission-chain.png","subjects":["research-boat","rov","tether","sampling","mission"],"uses":["field-test","project-update","popular-science","mission"],"alpha_required":true,"source":"imagegen+vision-mask"},
     {"id":"cutout.isometric.sensor-stack","title":"等轴工程传感器系统","kind":"cutout","style":"isometric-system","path":"assets/library/cutout-isometric/sensor-stack.png","subjects":["rov","sonar","camera","depth-sensor","system"],"uses":["popular-science","sensing","system-overview","project-update"],"alpha_required":true,"source":"imagegen+vision-mask"},
     {"id":"cutout.isometric.pool-workflow","title":"等轴工程水池测试流程","kind":"cutout","style":"isometric-system","path":"assets/library/cutout-isometric/pool-workflow.png","subjects":["rov","pool-test","control-desk","cable","workflow"],"uses":["training","project-update","laboratory","operations"],"alpha_required":true,"source":"imagegen+vision-mask"},
+    {"id":"cutout.aqua-glass.transparent-rov","title":"冰蓝透明 ROV","kind":"cutout","style":"aqua-glass","path":"assets/library/cutout-aqua-glass/transparent-rov.png","subjects":["rov","水下机器人","transparent-shell","thruster","camera"],"uses":["project-update","robot-profile","competition","sensing"],"alpha_required":true,"source":"imagegen+vision-mask"},
+    {"id":"cutout.aqua-glass.sonar-scan","title":"冰蓝透明声呐扫描","kind":"cutout","style":"aqua-glass","path":"assets/library/cutout-aqua-glass/sonar-scan.png","subjects":["sonar","声呐","scan-fan","sensor","mapping"],"uses":["popular-science","sensing","mapping","competition"],"alpha_required":true,"source":"imagegen+vision-mask"},
+    {"id":"cutout.aqua-glass.navigation-system","title":"冰蓝透明水下导航","kind":"cutout","style":"aqua-glass","path":"assets/library/cutout-aqua-glass/navigation-system.png","subjects":["auv","navigation","waypoint","buoy","route"],"uses":["navigation","autonomy","popular-science","project-update"],"alpha_required":true,"source":"imagegen+vision-mask"},
     {"id":"line.rov","title":"ROV 技术线稿","kind":"icon","style":"technical-line","path":"assets/library/line-technical/rov-outline.svg","subjects":["rov","机械臂","thruster"],"uses":["popular-science","robot-profile","specification"]},
     {"id":"line.auv","title":"AUV 技术线稿","kind":"icon","style":"technical-line","path":"assets/library/line-technical/auv-outline.svg","subjects":["auv","navigation","glider"],"uses":["popular-science","robot-profile","specification"]},
     {"id":"line.sonar","title":"声呐技术线稿","kind":"icon","style":"technical-line","path":"assets/library/line-technical/sonar-outline.svg","subjects":["sonar","声呐","sensing","fish"],"uses":["popular-science","sensing","mapping"]},

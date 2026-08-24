@@ -14,14 +14,16 @@
 
 - Recruitment and community: `watercolor-cutout`; choose `clay-miniature` when the story emphasizes making, training, or laboratory participation.
 - Event and field test: `paper-cut`; use `mechanical-industrial` when the story centers on equipment or operation.
-- Popular science and robot profiles: `technical-line`; switch to `isometric-system` when relationships or workflows matter, or `hard-tech` for sensing, autonomy, control, or a hero machine.
-- Project updates and competition: `hard-tech`; use `isometric-system` for mission chains and validation workflows, or `mechanical-industrial` when the evidence is a physical module or workshop process.
+- Popular science and robot profiles: `technical-line`; switch to `aqua-glass` when the subject is sonar, navigation, data links, or future-facing perception, `isometric-system` when relationships or workflows matter, or `hard-tech` for autonomy, control, or a hero machine.
+- Project updates and competition: `hard-tech`; use `aqua-glass` for a light, transparent view of sensing or navigation, `isometric-system` for mission chains and validation workflows, or `mechanical-industrial` when the evidence is a physical module or workshop process.
 - Hardware teardown, fabrication, repair, and training: `mechanical-industrial`, supported by `technical-line` diagrams.
 - `editorial-decor` is a supporting layer, never the dominant illustration system.
 
 The difference is semantic, not merely cosmetic: `hard-tech` presents a finished system and its capability; `mechanical-industrial` exposes how a part is built, connected, serviced, or operated. Keep one of them dominant in a single article.
 
 `clay-miniature` makes participation and hands-on learning feel approachable without adding cartoon faces. `isometric-system` explains how multiple platforms, sensors, and steps relate without relying on labels baked into the image.
+
+`aqua-glass` presents sensing and navigation as translucent engineering objects rather than glowing interface graphics. Keep it pale aqua, white, and silver with tiny coral safety accents; no navy, deep-blue panels, neon halos, HUDs, or baked labels.
 
 ## Cutout production
 

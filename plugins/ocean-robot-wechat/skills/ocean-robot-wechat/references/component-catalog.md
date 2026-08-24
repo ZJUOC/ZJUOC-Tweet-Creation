@@ -65,6 +65,14 @@ Use these when readers need to understand relationships, sequence, or an operati
 - `spot.isometric-sensors`: ROV with sonar, camera, and depth-sensor modules.
 - `spot.isometric-pool-workflow`: pool, control desk, cable, and ROV test workflow.
 
+## Aqua-glass components
+
+Use these for a light, transparent technology treatment of sensing, navigation, communications, and future-facing perception. Their Ardot component names begin with `组件｜冰蓝透明｜`.
+
+- `spot.aqua-glass-rov`: translucent ROV platform, robot profile and sensing carrier.
+- `spot.aqua-glass-sonar`: silver sonar module with a pale-aqua scanning fan.
+- `spot.aqua-glass-navigation`: AUV, three waypoints, route loop, and tethered surface buoy.
+
 ## Legacy large background assets
 
 These assets predate the light-only palette and are no longer selected automatically. Reuse them only with a deterministic lightening treatment that removes navy and deep-blue areas from the rendered article.

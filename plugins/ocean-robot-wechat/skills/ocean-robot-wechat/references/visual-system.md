@@ -38,6 +38,7 @@ Avoid generic AI glows, fantasy submarines, decorative dashboards, fake technica
 - `mechanical-industrial`: serviceable thrusters, joints, reels, fasteners, bearings, and workshop assemblies. Use believable steel, aluminum, and sparse orange anodized accents; show construction or operation rather than science-fiction styling. Best for teardown, fabrication, repair, and training.
 - `clay-miniature`: tactile matte miniatures of ROVs, control stations, tools, and pool tests. Keep the engineering believable and omit cartoon faces. Best for hands-on recruitment, training, and laboratory stories.
 - `isometric-system`: clean compact system scenes with simplified geometry and restrained 3D shading. Best for mission chains, module relationships, pool-test workflows, and multi-platform explanations; do not bake labels or dashboard UI into the image.
+- `aqua-glass`: translucent pale-aqua ROVs, sensing fields, navigation loops, and data-link relationships rendered as bright engineering miniatures. Use white, light silver, and tiny coral safety accents; never introduce navy, dark-blue panels, neon halos, HUDs, or baked labels. Best for sonar, navigation, communications, and future-facing perception.
 - `technical-line`: native SVG diagrams and icons with precise strokes. Best for science, parameters, systems, and process explanations.
 - `editorial-decor`: native SVG waves, routes, bubbles, sonar rings, and photo corners. Use only as punctuation.
 

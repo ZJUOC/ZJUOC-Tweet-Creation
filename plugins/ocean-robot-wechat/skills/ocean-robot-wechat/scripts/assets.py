@@ -21,6 +21,7 @@ STYLE_LABELS = {
     "mechanical-industrial": "机械工业",
     "clay-miniature": "黏土模型",
     "isometric-system": "等轴工程",
+    "aqua-glass": "冰蓝透明",
     "technical-line": "技术线稿",
     "editorial-decor": "编辑装饰",
 }
