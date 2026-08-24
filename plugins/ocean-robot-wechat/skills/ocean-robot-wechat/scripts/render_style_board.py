@@ -17,6 +17,8 @@ STYLE_LABELS = {
     "paper-cut": ("纸雕叙事", "活动、外场与团队故事"),
     "hard-tech": ("硬核科技", "整机能力、感知、自主与竞赛"),
     "mechanical-industrial": ("机械工业", "结构、拆解、制造与运维"),
+    "clay-miniature": ("黏土模型", "招新、培训与实验室日常"),
+    "isometric-system": ("等轴工程", "任务链、系统关系与测试流程"),
 }
 BACKGROUNDS = ["#FFF9F2", "#EAF7F8"]
 

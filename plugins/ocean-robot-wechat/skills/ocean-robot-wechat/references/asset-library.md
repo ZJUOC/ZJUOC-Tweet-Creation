@@ -12,14 +12,16 @@
 
 ## Style routing
 
-- Recruitment and community: `watercolor-cutout`; use `paper-cut` for one major feature moment.
+- Recruitment and community: `watercolor-cutout`; choose `clay-miniature` when the story emphasizes making, training, or laboratory participation.
 - Event and field test: `paper-cut`; use `mechanical-industrial` when the story centers on equipment or operation.
-- Popular science and robot profiles: `technical-line`; switch to `hard-tech` for sensing, autonomy, control, or a hero machine.
-- Project updates and competition: `hard-tech`; use `mechanical-industrial` when the evidence is a physical module or workshop process.
+- Popular science and robot profiles: `technical-line`; switch to `isometric-system` when relationships or workflows matter, or `hard-tech` for sensing, autonomy, control, or a hero machine.
+- Project updates and competition: `hard-tech`; use `isometric-system` for mission chains and validation workflows, or `mechanical-industrial` when the evidence is a physical module or workshop process.
 - Hardware teardown, fabrication, repair, and training: `mechanical-industrial`, supported by `technical-line` diagrams.
 - `editorial-decor` is a supporting layer, never the dominant illustration system.
 
 The difference is semantic, not merely cosmetic: `hard-tech` presents a finished system and its capability; `mechanical-industrial` exposes how a part is built, connected, serviced, or operated. Keep one of them dominant in a single article.
+
+`clay-miniature` makes participation and hands-on learning feel approachable without adding cartoon faces. `isometric-system` explains how multiple platforms, sensors, and steps relate without relying on labels baked into the image.
 
 ## Cutout production
 

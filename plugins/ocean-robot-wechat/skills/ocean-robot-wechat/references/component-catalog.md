@@ -49,6 +49,22 @@ Use these for construction, teardown, service, fabrication, and operations. Thei
 - `spot.mechanical-joint`: robotic arm joint, actuator and sampling hardware.
 - `spot.mechanical-tether`: ROV tether reel, deck operation and field-test equipment.
 
+## Clay-miniature components
+
+Use these for hands-on recruitment, training, and approachable laboratory stories. Their Ardot component names begin with `组件｜黏土模型｜`.
+
+- `spot.clay-workbench`: ROV assembly stand and tools.
+- `spot.clay-pool-test`: miniature ROV pool-test scene.
+- `spot.clay-control-station`: portable control station, joystick, cable, and ROV.
+
+## Isometric-system components
+
+Use these when readers need to understand relationships, sequence, or an operating workflow. Their Ardot component names begin with `组件｜等轴工程｜`.
+
+- `spot.isometric-mission`: research boat, tethered ROV, and seabed target mission chain.
+- `spot.isometric-sensors`: ROV with sonar, camera, and depth-sensor modules.
+- `spot.isometric-pool-workflow`: pool, control desk, cable, and ROV test workflow.
+
 ## Legacy large background assets
 
 These assets predate the light-only palette and are no longer selected automatically. Reuse them only with a deterministic lightening treatment that removes navy and deep-blue areas from the rendered article.

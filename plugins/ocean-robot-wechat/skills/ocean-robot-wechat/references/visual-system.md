@@ -36,6 +36,8 @@ Avoid generic AI glows, fantasy submarines, decorative dashboards, fake technica
 - `paper-cut`: tactile field-test, event, and team-story illustrations. Best for openings or one major transition.
 - `hard-tech`: near-future hard-surface ROVs, sensing arrays, and autonomy electronics. Use graphite and light aluminum with restrained aqua and coral safety accents; avoid neon glows and game-interface decoration. Best for competitions, research milestones, sensing, autonomy, and control.
 - `mechanical-industrial`: serviceable thrusters, joints, reels, fasteners, bearings, and workshop assemblies. Use believable steel, aluminum, and sparse orange anodized accents; show construction or operation rather than science-fiction styling. Best for teardown, fabrication, repair, and training.
+- `clay-miniature`: tactile matte miniatures of ROVs, control stations, tools, and pool tests. Keep the engineering believable and omit cartoon faces. Best for hands-on recruitment, training, and laboratory stories.
+- `isometric-system`: clean compact system scenes with simplified geometry and restrained 3D shading. Best for mission chains, module relationships, pool-test workflows, and multi-platform explanations; do not bake labels or dashboard UI into the image.
 - `technical-line`: native SVG diagrams and icons with precise strokes. Best for science, parameters, systems, and process explanations.
 - `editorial-decor`: native SVG waves, routes, bubbles, sonar rings, and photo corners. Use only as punctuation.
 

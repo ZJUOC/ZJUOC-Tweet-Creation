@@ -19,6 +19,8 @@ STYLE_LABELS = {
     "paper-cut": "纸雕叙事",
     "hard-tech": "硬核科技",
     "mechanical-industrial": "机械工业",
+    "clay-miniature": "黏土模型",
+    "isometric-system": "等轴工程",
     "technical-line": "技术线稿",
     "editorial-decor": "编辑装饰",
 }

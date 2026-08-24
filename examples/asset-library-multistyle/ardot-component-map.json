@@ -4,7 +4,9 @@
   "library_board_node_id": "3:12",
   "sections": {
     "hard-tech": "3:15",
-    "mechanical-industrial": "3:19"
+    "mechanical-industrial": "3:19",
+    "clay-miniature": "3:41",
+    "isometric-system": "3:45"
   },
   "components": {
     "spot.hard-tech-rov": "3:24",
@@ -12,6 +14,12 @@
     "spot.hard-tech-autonomy": "3:30",
     "spot.mechanical-thruster": "3:33",
     "spot.mechanical-joint": "3:36",
-    "spot.mechanical-tether": "3:39"
+    "spot.mechanical-tether": "3:39",
+    "spot.clay-workbench": "3:50",
+    "spot.clay-pool-test": "3:53",
+    "spot.clay-control-station": "3:56",
+    "spot.isometric-mission": "3:59",
+    "spot.isometric-sensors": "3:62",
+    "spot.isometric-pool-workflow": "3:65"
   }
 }
