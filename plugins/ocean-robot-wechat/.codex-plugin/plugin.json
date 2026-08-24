@@ -1,6 +1,6 @@
 {
   "name": "ocean-robot-wechat",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Ardot-first WeChat article system for the Zhejiang University Ocean Robot Association, with an AI-searchable visual asset library, lively components, deterministic HTML compilation, and draft publishing.",
   "author": {
     "name": "ZJU Ocean Robot Association"

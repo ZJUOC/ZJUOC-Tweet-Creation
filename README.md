@@ -2,7 +2,7 @@
 
 浙江大学学生海洋机器人协会的 AI 原生微信公众号内容工作流。仓库可直接作为 Codex Marketplace 安装，包含 Ardot 原生排版、可检索水机素材库、微信安全 HTML 编译、浏览器导入桥接和可选的公众号草稿 MCP。
 
-![首批水机素材](examples/asset-library/cutout-contact-sheet.jpg)
+![水机多风格组件素材](examples/asset-library-multistyle/style-board.jpg)
 
 ## 能做什么
 
@@ -70,10 +70,12 @@ index.html + wechat.html + compile-report.json
 
 ## 素材库
 
-当前首批注册 19 个素材：
+当前注册 25 个素材，分成 6 个可检索风格族：
 
 - 5 个水彩真透明切图：ROV、推进器工具、声呐机器鱼、水下滑翔机、智能浮标。
 - 2 个纸雕真透明切图：机械臂取样、外场测试船。
+- 3 个硬核科技真透明切图：ROV 核心机体、多波束声呐、自主控制核心。
+- 3 个机械工业真透明切图：推进器爆炸结构、机械臂关节、ROV 缆绳绞盘。
 - 6 个原生 SVG 技术线稿。
 - 6 个原生 SVG 编辑装饰。
 
@@ -105,7 +107,8 @@ plugins/ocean-robot-wechat/               可安装插件
   mcp/wechat-publisher-mcp/                可选草稿发布服务
   assets/chrome-extension/                 公众号编辑器导入桥接
 examples/recruitment-2026-lively/          完整示例推文
-examples/asset-library/                    素材检索预览
+examples/asset-library/                    基础素材检索预览
+examples/asset-library-multistyle/         多风格分类预览与 Ardot 节点映射
 docs/                                      维护文档
 scripts/                                   安装、预览和验证入口
 ```

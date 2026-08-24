@@ -34,10 +34,12 @@ Avoid generic AI glows, fantasy submarines, decorative dashboards, fake technica
 
 - `watercolor-cutout`: friendly ROVs, AUVs, tools, buoys, and small science characters. Best for recruitment and introductions.
 - `paper-cut`: tactile field-test, event, and team-story illustrations. Best for openings or one major transition.
+- `hard-tech`: near-future hard-surface ROVs, sensing arrays, and autonomy electronics. Use graphite and light aluminum with restrained aqua and coral safety accents; avoid neon glows and game-interface decoration. Best for competitions, research milestones, sensing, autonomy, and control.
+- `mechanical-industrial`: serviceable thrusters, joints, reels, fasteners, bearings, and workshop assemblies. Use believable steel, aluminum, and sparse orange anodized accents; show construction or operation rather than science-fiction styling. Best for teardown, fabrication, repair, and training.
 - `technical-line`: native SVG diagrams and icons with precise strokes. Best for science, parameters, systems, and process explanations.
 - `editorial-decor`: native SVG waves, routes, bubbles, sonar rings, and photo corners. Use only as punctuation.
 
-Use one dominant style per article. A supporting decorative SVG may accompany it, but do not mix watercolor and paper-cut assets repeatedly in the same article.
+Use one dominant style per article. A supporting technical or decorative SVG may accompany it, but do not repeatedly mix watercolor with hard-tech or mechanical assets in the same article.
 
 ## Small illustration defaults
 

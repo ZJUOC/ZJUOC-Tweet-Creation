@@ -68,13 +68,17 @@ def main() -> None:
             if any(pattern.search(source) for pattern in secret_patterns):
                 errors.append(f"possible secret in tracked file: {relative}")
 
-    preview = ROOT / "examples" / "asset-library" / "index.html"
-    preview_source = preview.read_text(encoding="utf-8")
-    for src in re.findall(r'<img[^>]+src="([^"]+)"', preview_source):
-        if src.startswith(("file:", "/")):
-            errors.append(f"non-portable preview image source: {src}")
-        elif not (preview.parent / src).resolve().exists():
-            errors.append(f"missing preview image source: {src}")
+    previews = [
+        ROOT / "examples" / "asset-library" / "index.html",
+        ROOT / "examples" / "asset-library-multistyle" / "index.html",
+    ]
+    for preview in previews:
+        preview_source = preview.read_text(encoding="utf-8")
+        for src in re.findall(r'<img[^>]+src="([^"]+)"', preview_source):
+            if src.startswith(("file:", "/")):
+                errors.append(f"non-portable preview image source: {preview}: {src}")
+            elif not (preview.parent / src).resolve().exists():
+                errors.append(f"missing preview image source: {preview}: {src}")
 
     if errors:
         print(json.dumps({"ok": False, "errors": errors}, ensure_ascii=False, indent=2))

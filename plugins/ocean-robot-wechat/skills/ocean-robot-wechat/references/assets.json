@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "policy": {
     "primary_source": "ardot-native",
     "search_before_generate": true,
@@ -8,10 +8,12 @@
     "forbidden_colors_outside_logo": ["#0054A7", "navy", "deep-blue"]
   },
   "style_routes": {
-    "recruitment": ["watercolor-cutout", "paper-cut"],
-    "event": ["paper-cut", "editorial-decor"],
-    "popular-science": ["technical-line", "editorial-decor"],
-    "project-update": ["technical-line", "watercolor-cutout"]
+    "recruitment": ["watercolor-cutout", "paper-cut", "mechanical-industrial"],
+    "event": ["paper-cut", "mechanical-industrial", "editorial-decor"],
+    "popular-science": ["technical-line", "hard-tech", "editorial-decor"],
+    "project-update": ["hard-tech", "mechanical-industrial", "technical-line"],
+    "hardware-deep-dive": ["mechanical-industrial", "technical-line", "hard-tech"],
+    "competition": ["hard-tech", "technical-line", "watercolor-cutout"]
   },
   "assets": [
     {"id":"cutout.watercolor.rov-bubble","title":"气泡友好 ROV","kind":"cutout","style":"watercolor-cutout","path":"assets/library/cutout-watercolor/rov-bubble.png","subjects":["rov","机械臂","气泡"],"uses":["recruitment","introduction","training"],"alpha_required":true,"source":"imagegen-edit+chroma-key"},
@@ -21,6 +23,12 @@
     {"id":"cutout.watercolor.smart-buoy","title":"智能海洋浮标","kind":"cutout","style":"watercolor-cutout","path":"assets/library/cutout-watercolor/smart-buoy.png","subjects":["buoy","浮标","sensor","solar"],"uses":["popular-science","field-test","sensing"],"alpha_required":true,"source":"imagegen+chroma-key"},
     {"id":"cutout.paper.robotic-arm-sample","title":"纸雕机械臂取样","kind":"cutout","style":"paper-cut","path":"assets/library/cutout-paper/robotic-arm-sample.png","subjects":["机械臂","gripper","取样","coral"],"uses":["recruitment","event","hardware"],"alpha_required":true,"source":"imagegen+chroma-key"},
     {"id":"cutout.paper.field-test-boat","title":"纸雕外场测试船","kind":"cutout","style":"paper-cut","path":"assets/library/cutout-paper/field-test-boat.png","subjects":["boat","外场","测试","rov","equipment"],"uses":["event","field-test","recruitment"],"alpha_required":true,"source":"imagegen+chroma-key"},
+    {"id":"cutout.hard-tech.rov-core","title":"硬核科技 ROV 核心机体","kind":"cutout","style":"hard-tech","path":"assets/library/cutout-hard-tech/rov-core.png","subjects":["rov","水下机器人","thruster","camera","hard-surface"],"uses":["project-update","competition","robot-profile","cover-accent"],"alpha_required":true,"source":"imagegen+vision-mask"},
+    {"id":"cutout.hard-tech.sonar-array","title":"硬核科技多波束声呐阵列","kind":"cutout","style":"hard-tech","path":"assets/library/cutout-hard-tech/sonar-array.png","subjects":["sonar","声呐阵列","sensor","mapping","connector"],"uses":["popular-science","sensing","mapping","competition"],"alpha_required":true,"source":"imagegen+chroma-key"},
+    {"id":"cutout.hard-tech.autonomy-core","title":"硬核科技自主控制核心","kind":"cutout","style":"hard-tech","path":"assets/library/cutout-hard-tech/autonomy-core.png","subjects":["autonomy","控制器","embedded","sensor-fusion","electronics"],"uses":["project-update","popular-science","control","competition"],"alpha_required":true,"source":"imagegen+chroma-key"},
+    {"id":"cutout.mechanical.thruster-exploded","title":"机械工业推进器爆炸结构","kind":"cutout","style":"mechanical-industrial","path":"assets/library/cutout-mechanical/thruster-exploded.png","subjects":["thruster","推进器","exploded-view","bearing","motor"],"uses":["hardware-deep-dive","popular-science","training","debugging"],"alpha_required":true,"source":"imagegen+chroma-key"},
+    {"id":"cutout.mechanical.robotic-joint","title":"机械工业机械臂关节","kind":"cutout","style":"mechanical-industrial","path":"assets/library/cutout-mechanical/robotic-joint.png","subjects":["机械臂","robotic-arm","joint","gripper","actuator"],"uses":["hardware-deep-dive","project-update","training","sampling"],"alpha_required":true,"source":"imagegen+chroma-key"},
+    {"id":"cutout.mechanical.tether-reel","title":"机械工业 ROV 缆绳绞盘","kind":"cutout","style":"mechanical-industrial","path":"assets/library/cutout-mechanical/tether-reel.png","subjects":["tether","缆绳","winch","reel","deck-equipment"],"uses":["field-test","hardware-deep-dive","project-update","operations"],"alpha_required":true,"source":"imagegen+chroma-key"},
     {"id":"line.rov","title":"ROV 技术线稿","kind":"icon","style":"technical-line","path":"assets/library/line-technical/rov-outline.svg","subjects":["rov","机械臂","thruster"],"uses":["popular-science","robot-profile","specification"]},
     {"id":"line.auv","title":"AUV 技术线稿","kind":"icon","style":"technical-line","path":"assets/library/line-technical/auv-outline.svg","subjects":["auv","navigation","glider"],"uses":["popular-science","robot-profile","specification"]},
     {"id":"line.sonar","title":"声呐技术线稿","kind":"icon","style":"technical-line","path":"assets/library/line-technical/sonar-outline.svg","subjects":["sonar","声呐","sensing","fish"],"uses":["popular-science","sensing","mapping"]},

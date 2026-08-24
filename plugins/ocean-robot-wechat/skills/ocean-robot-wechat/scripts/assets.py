@@ -14,6 +14,14 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parent.parent
 CATALOG_PATH = ROOT / "references" / "assets.json"
+STYLE_LABELS = {
+    "watercolor-cutout": "卡通水彩",
+    "paper-cut": "纸雕叙事",
+    "hard-tech": "硬核科技",
+    "mechanical-industrial": "机械工业",
+    "technical-line": "技术线稿",
+    "editorial-decor": "编辑装饰",
+}
 
 
 def load_catalog() -> dict[str, Any]:
@@ -106,20 +114,21 @@ def validate(catalog: dict[str, Any]) -> None:
 def preview(catalog: dict[str, Any], output: Path) -> None:
     cards = []
     for item in catalog["assets"]:
-        asset_path = (ROOT / item["path"]).resolve()
-        try:
-            uri = Path(os.path.relpath(asset_path, output.parent.resolve())).as_posix()
-        except ValueError:
-            uri = asset_path.as_uri()
+        uri = Path(os.path.relpath(ROOT / item["path"], output.parent)).as_posix()
         tags = " ".join([item["style"], item["kind"], *item.get("subjects", []), *item.get("uses", [])])
         cards.append(f'''<article class="card" data-search="{escape(tags.lower())}" data-style="{escape(item['style'])}">
 <div class="art"><img src="{escape(uri)}" alt="{escape(item['title'])}"></div>
-<div class="meta"><span>{escape(item['style'])}</span><h2>{escape(item['title'])}</h2><code>{escape(item['id'])}</code></div></article>''')
+<div class="meta"><span>{escape(STYLE_LABELS.get(item['style'], item['style']))}</span><h2>{escape(item['title'])}</h2><code>{escape(item['id'])}</code></div></article>''')
+    styles = sorted({item["style"] for item in catalog["assets"]})
+    buttons = ['<button class="active" data-style="">全部</button>'] + [
+        f'<button data-style="{escape(style)}">{escape(STYLE_LABELS.get(style, style))}</button>'
+        for style in styles
+    ]
     output.parent.mkdir(parents=True, exist_ok=True)
     html = f'''<!doctype html><meta charset="utf-8"><title>水机 AI 素材库</title>
-<style>*{{box-sizing:border-box}}body{{margin:0;background:#f7fbfa;color:#2e4148;font:15px/1.5 system-ui,-apple-system,sans-serif}}header{{position:sticky;top:0;z-index:2;padding:28px 5vw 18px;background:rgba(247,251,250,.94);backdrop-filter:blur(14px);border-bottom:1px solid #dceced}}h1{{margin:0 0 12px;font-size:30px}}input{{width:min(680px,100%);border:1px solid #bcdde0;border-radius:999px;padding:12px 18px;background:white;font:inherit}}main{{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;padding:24px 5vw 64px}}.card{{overflow:hidden;border:1px solid #dceced;border-radius:22px;background:white;box-shadow:0 8px 24px rgba(46,65,72,.06)}}.art{{aspect-ratio:1;background:#fff9f2;display:grid;place-items:center;padding:16px}}.art img{{max-width:100%;max-height:100%;object-fit:contain}}.meta{{padding:14px 16px 18px}}.meta span{{font-size:12px;color:#d66f58;text-transform:uppercase}}h2{{font-size:17px;margin:4px 0 7px}}code{{font-size:11px;color:#61777d;word-break:break-all}}.hide{{display:none}}</style>
-<header><h1>水机 AI 素材库 · {len(catalog['assets'])}</h1><input id="q" placeholder="搜索：ROV、声呐、招新、technical-line…"></header><main>{''.join(cards)}</main>
-<script>q.oninput=()=>{{const v=q.value.trim().toLowerCase();document.querySelectorAll('.card').forEach(c=>c.classList.toggle('hide',v&&!c.dataset.search.includes(v)))}}</script>'''
+<style>*{{box-sizing:border-box}}body{{margin:0;background:#f7fbfa;color:#2e4148;font:15px/1.5 system-ui,-apple-system,sans-serif}}header{{position:sticky;top:0;z-index:2;padding:24px 5vw 18px;background:rgba(247,251,250,.95);backdrop-filter:blur(14px);border-bottom:1px solid #dceced}}h1{{margin:0 0 12px;font-size:30px}}.tools{{display:flex;gap:10px;flex-wrap:wrap}}input{{flex:1 1 360px;max-width:680px;border:1px solid #bcdde0;border-radius:999px;padding:12px 18px;background:white;font:inherit}}.filters{{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}}button{{border:1px solid #bcdde0;border-radius:999px;padding:7px 13px;background:white;color:#53666c;font:inherit;cursor:pointer}}button.active{{border-color:#f09a7c;background:#fff1eb;color:#a84e39}}main{{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;padding:24px 5vw 64px}}.card{{overflow:hidden;border:1px solid #dceced;border-radius:22px;background:white;box-shadow:0 8px 24px rgba(46,65,72,.06)}}.art{{aspect-ratio:1;background:linear-gradient(135deg,#fff9f2,#eaf7f8);display:grid;place-items:center;padding:16px}}.art img{{max-width:100%;max-height:100%;object-fit:contain}}.meta{{padding:14px 16px 18px}}.meta span{{font-size:12px;color:#d66f58;text-transform:uppercase}}h2{{font-size:17px;margin:4px 0 7px}}code{{font-size:11px;color:#61777d;word-break:break-all}}.hide{{display:none}}</style>
+<header><h1>水机 AI 素材库 · {len(catalog['assets'])}</h1><div class="tools"><input id="q" placeholder="搜索：ROV、声呐、机械臂、项目进展…"></div><div class="filters">{''.join(buttons)}</div></header><main>{''.join(cards)}</main>
+<script>let active='';const cards=[...document.querySelectorAll('.card')];function filter(){{const v=q.value.trim().toLowerCase();cards.forEach(c=>c.classList.toggle('hide',(active&&c.dataset.style!==active)||(v&&!c.dataset.search.includes(v))))}}q.oninput=filter;document.querySelectorAll('button').forEach(b=>b.onclick=()=>{{document.querySelector('button.active').classList.remove('active');b.classList.add('active');active=b.dataset.style;filter()}})</script>'''
     output.write_text(html, encoding="utf-8")
     print(output)
 

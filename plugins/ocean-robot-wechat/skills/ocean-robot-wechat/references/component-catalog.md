@@ -13,20 +13,69 @@ The machine-readable source of truth is `components.json`. Query it through `scr
 
 These are the default assets when a prompt asks for a plugin image, icon-like picture, or paragraph decoration. Display them at about 48-120 px rather than as a full-width image.
 
-### Watercolor cutouts
+### `spot.sonar-rov`
 
-- `spot.bubble-rov`: friendly ROV, introduction, recruitment, training.
-- `spot.thruster-tools`: propulsion, hardware, debugging, training.
-- `spot.sonar-fish`: sonar, sensing, competition, autonomy.
-- `spot.auv-glider`: navigation, autonomy, robot profiles, popular science.
-- `spot.smart-buoy`: sensing, field tests, popular science.
+- File: `assets/spot-sonar-rov-tile.png`
+- Use for: sonar, underwater sensing, communications, detection.
 
-### Paper-cut feature illustrations
+### `spot.auv`
 
-- `spot.robotic-arm-sample`: sampling, hardware, recruitment, events.
-- `spot.field-test-boat`: field tests, events, recruitment.
+- File: `assets/spot-auv-tile.png`
+- Use for: autonomous platforms, robot introductions, navigation.
 
-All files are registered in `assets.json`. Cutout backgrounds are supplied at layout time; they are not baked into the PNG.
+### `spot.thruster`
+
+- File: `assets/spot-thruster-tile.png`
+- Use for: propulsion, hardware, control, mechanical systems.
+
+### `spot.wave`
+
+- File: `assets/spot-wave-tile.png`
+- Use for: section punctuation, ocean topics, article endings.
+
+## Hard-tech components
+
+Use these for finished systems, perception, autonomy, competitions, and research milestones. Their Ardot component names begin with `组件｜硬核科技｜`.
+
+- `spot.hard-tech-rov`: complete ROV core body, hero machine or platform introduction.
+- `spot.hard-tech-sonar`: multibeam sonar array, mapping and perception.
+- `spot.hard-tech-autonomy`: embedded autonomy core, control and sensor fusion.
+
+## Mechanical-industrial components
+
+Use these for construction, teardown, service, fabrication, and operations. Their Ardot component names begin with `组件｜机械工业｜`.
+
+- `spot.mechanical-thruster`: exploded thruster assembly, propulsion and repair.
+- `spot.mechanical-joint`: robotic arm joint, actuator and sampling hardware.
+- `spot.mechanical-tether`: ROV tether reel, deck operation and field-test equipment.
+
+## Legacy large background assets
+
+These assets predate the light-only palette and are no longer selected automatically. Reuse them only with a deterministic lightening treatment that removes navy and deep-blue areas from the rendered article.
+
+### `visual.sonar-opener`
+
+- File: `assets/sonar-section-opener.png`
+- Use for: popular science, sensing, navigation, mapping, underwater perception.
+- Aspect ratio: 3:2 landscape.
+- Overlay zone: upper-left and upper-center water area.
+- Avoid: dense text over the seabed contours.
+
+### `visual.parameter-blueprint`
+
+- File: `assets/auv-parameter-card.png`
+- Use for: robot introductions, project profiles, specifications, technical summaries.
+- Aspect ratio: 3:2 landscape.
+- Overlay zone: upper-left and center-left pale area.
+- Avoid: covering the vehicle silhouette with long paragraphs.
+
+### `visual.closing-ocean`
+
+- File: `assets/ocean-closing-card.png`
+- Use for: article endings, recruitment, event registration, follow prompts.
+- Aspect ratio: 4:5 portrait.
+- Overlay zone: central pale area.
+- Avoid: using the original dark wave edges; lighten the image before layout, then place the QR code on a solid pale area.
 
 ## Runtime blocks
 
@@ -46,7 +95,10 @@ Add one entry to `components.json`, add the corresponding asset if needed, and v
 
 ```bash
 python3 scripts/components.py list
+python3 scripts/components.py list --kind spot --style mechanical-industrial
+python3 scripts/components.py recommend project-update --style hard-tech
 python3 scripts/components.py show <component-id>
+python3 scripts/components.py validate
 ```
 
 Keep IDs stable so a future MCP server can expose the same catalog without changing article prompts.

@@ -13,10 +13,13 @@
 ## Style routing
 
 - Recruitment and community: `watercolor-cutout`; use `paper-cut` for one major feature moment.
-- Event and field test: `paper-cut`.
-- Popular science and robot profiles: `technical-line`.
-- Project updates: `technical-line`, with at most one `watercolor-cutout` accent.
+- Event and field test: `paper-cut`; use `mechanical-industrial` when the story centers on equipment or operation.
+- Popular science and robot profiles: `technical-line`; switch to `hard-tech` for sensing, autonomy, control, or a hero machine.
+- Project updates and competition: `hard-tech`; use `mechanical-industrial` when the evidence is a physical module or workshop process.
+- Hardware teardown, fabrication, repair, and training: `mechanical-industrial`, supported by `technical-line` diagrams.
 - `editorial-decor` is a supporting layer, never the dominant illustration system.
+
+The difference is semantic, not merely cosmetic: `hard-tech` presents a finished system and its capability; `mechanical-industrial` exposes how a part is built, connected, serviced, or operated. Keep one of them dominant in a single article.
 
 ## Cutout production
 
@@ -37,3 +40,5 @@ Every new entry requires `id`, `title`, `kind`, `style`, `path`, `subjects`, and
 ## Frequency and layout
 
 Use one spot illustration per two to three content blocks. Prefer open placement, partial edge overlap, and deliberate scale changes. A tile background may be supplied by the Ardot or HTML layout, but it must not be baked into the reusable PNG.
+
+Hard-tech and mechanical cutouts carry more surface detail than cartoon assets. Display them at 80-160 px for inline use or 180-280 px for a feature moment; do not shrink exploded assemblies until the internal parts become noise.

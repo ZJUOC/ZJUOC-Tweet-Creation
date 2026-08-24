@@ -1,0 +1,17 @@
+{
+  "file_url": "https://ardot.tencent.com/file/718358960022995",
+  "page_id": "0:1",
+  "library_board_node_id": "3:12",
+  "sections": {
+    "hard-tech": "3:15",
+    "mechanical-industrial": "3:19"
+  },
+  "components": {
+    "spot.hard-tech-rov": "3:24",
+    "spot.hard-tech-sonar": "3:27",
+    "spot.hard-tech-autonomy": "3:30",
+    "spot.mechanical-thruster": "3:33",
+    "spot.mechanical-joint": "3:36",
+    "spot.mechanical-tether": "3:39"
+  }
+}

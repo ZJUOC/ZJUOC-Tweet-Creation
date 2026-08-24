@@ -10,3 +10,5 @@
 4. 需要草稿箱 API 时，复制 `.env.example` 到插件根目录 `.env`，设置 `MCP_BEARER_TOKEN`、`WECHAT_APP_ID`、`WECHAT_APP_SECRET`，运行 `scripts/launch-wechat-publisher-mcp`。
 
 `MCP_ALLOW_PUBLISH` 默认关闭。正常工作流只创建草稿；正式群发必须单独确认。
+
+素材库目前提供卡通水彩、纸雕叙事、硬核科技、机械工业、技术线稿和编辑装饰六类。项目进展、感知与竞赛优先选择 `hard-tech`；结构拆解、加工、维修与外场设备优先选择 `mechanical-industrial`。

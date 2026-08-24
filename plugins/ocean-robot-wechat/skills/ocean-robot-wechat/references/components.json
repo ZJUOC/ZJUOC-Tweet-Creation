@@ -1,9 +1,12 @@
 {
-  "version": 3,
+  "version": 4,
   "authoring": {
     "primary": "ardot-native",
     "html_role": "preview-only",
-    "component_name_prefix": "组件｜"
+    "component_name_prefix": "组件｜",
+    "library_file_url": "https://ardot.tencent.com/file/718358960022995",
+    "library_page_id": "0:1",
+    "library_board_node_id": "3:12"
   },
   "brand": {
     "ink": "#2E4148",
@@ -26,10 +29,82 @@
       "uses": ["header", "footer", "cover-overlay"]
     },
     {
+      "id": "visual.sonar-opener",
+      "kind": "visual",
+      "title": "Sonar section opener",
+      "asset": "assets/sonar-section-opener.png",
+      "aspect_ratio": "3:2",
+      "overlay_zone": "upper-left to upper-center",
+      "uses": ["popular-science", "sensing", "navigation", "mapping"]
+    },
+    {
+      "id": "visual.parameter-blueprint",
+      "kind": "visual",
+      "title": "AUV parameter card background",
+      "asset": "assets/auv-parameter-card.png",
+      "aspect_ratio": "3:2",
+      "overlay_zone": "upper-left and center-left",
+      "uses": ["project-update", "robot-profile", "technical-summary"]
+    },
+    {
+      "id": "visual.closing-ocean",
+      "kind": "visual",
+      "title": "Ocean closing card background",
+      "asset": "assets/ocean-closing-card.png",
+      "aspect_ratio": "4:5",
+      "overlay_zone": "center",
+      "uses": ["footer", "recruitment", "event-registration", "follow"]
+    },
+    {
+      "id": "spot.sonar-rov",
+      "kind": "spot",
+      "title": "Sonar and ROV spot illustration",
+      "asset": "assets/spot-sonar-rov-tile.png",
+      "style": "watercolor-cutout",
+      "ardot_component_name": "组件｜小插图｜声呐ROV",
+      "aspect_ratio": "1:1",
+      "display_px": "48-120",
+      "uses": ["sonar", "sensing", "communications", "detection"]
+    },
+    {
+      "id": "spot.auv",
+      "kind": "spot",
+      "title": "AUV spot illustration",
+      "asset": "assets/spot-auv-tile.png",
+      "style": "watercolor-cutout",
+      "ardot_component_name": "组件｜小插图｜AUV",
+      "aspect_ratio": "1:1",
+      "display_px": "48-120",
+      "uses": ["autonomy", "navigation", "robot-profile"]
+    },
+    {
+      "id": "spot.thruster",
+      "kind": "spot",
+      "title": "Marine thruster spot illustration",
+      "asset": "assets/spot-thruster-tile.png",
+      "style": "watercolor-cutout",
+      "ardot_component_name": "组件｜小插图｜推进器",
+      "aspect_ratio": "1:1",
+      "display_px": "48-120",
+      "uses": ["propulsion", "hardware", "control", "mechanical-system"]
+    },
+    {
+      "id": "spot.wave",
+      "kind": "spot",
+      "title": "Ocean wave spot illustration",
+      "asset": "assets/spot-wave-tile.png",
+      "style": "editorial-decor",
+      "ardot_component_name": "组件｜小插图｜海浪",
+      "aspect_ratio": "1:1",
+      "display_px": "48-120",
+      "uses": ["section-punctuation", "ocean-topic", "ending"]
+    },
+    {
       "id": "spot.bubble-rov",
       "kind": "spot",
       "title": "Friendly bubble ROV spot illustration",
       "asset": "assets/library/cutout-watercolor/rov-bubble.png",
+      "style": "watercolor-cutout",
       "ardot_component_name": "组件｜小插图｜气泡ROV",
       "aspect_ratio": "1:1",
       "display_px": "56-104",
@@ -40,6 +115,7 @@
       "kind": "spot",
       "title": "Thruster and wrench spot illustration",
       "asset": "assets/library/cutout-watercolor/thruster-wrench.png",
+      "style": "watercolor-cutout",
       "ardot_component_name": "组件｜小插图｜推进器工具",
       "aspect_ratio": "1:1",
       "display_px": "56-104",
@@ -50,50 +126,89 @@
       "kind": "spot",
       "title": "Robot fish and sonar spot illustration",
       "asset": "assets/library/cutout-watercolor/sonar-fish.png",
+      "style": "watercolor-cutout",
       "ardot_component_name": "组件｜小插图｜声呐机器鱼",
       "aspect_ratio": "1:1",
       "display_px": "56-104",
       "uses": ["sonar", "competition", "autonomy"]
     },
     {
-      "id": "spot.auv-glider",
+      "id": "spot.hard-tech-rov",
       "kind": "spot",
-      "title": "Underwater glider spot illustration",
-      "asset": "assets/library/cutout-watercolor/auv-glider.png",
-      "ardot_component_name": "组件｜小插图｜水下滑翔机",
+      "style": "hard-tech",
+      "title": "Hard-tech ROV core",
+      "asset": "assets/library/cutout-hard-tech/rov-core.png",
+      "ardot_component_name": "组件｜硬核科技｜ROV核心机体",
+      "ardot_file_url": "https://ardot.tencent.com/file/718358960022995",
+      "ardot_node_id": "3:24",
       "aspect_ratio": "1:1",
-      "display_px": "72-160",
-      "uses": ["autonomy", "navigation", "robot-profile", "popular-science"]
+      "display_px": "96-220",
+      "uses": ["project-update", "competition", "robot-profile", "cover-accent"]
     },
     {
-      "id": "spot.smart-buoy",
+      "id": "spot.hard-tech-sonar",
       "kind": "spot",
-      "title": "Smart buoy spot illustration",
-      "asset": "assets/library/cutout-watercolor/smart-buoy.png",
-      "ardot_component_name": "组件｜小插图｜智能浮标",
+      "style": "hard-tech",
+      "title": "Hard-tech multibeam sonar array",
+      "asset": "assets/library/cutout-hard-tech/sonar-array.png",
+      "ardot_component_name": "组件｜硬核科技｜多波束声呐阵列",
+      "ardot_file_url": "https://ardot.tencent.com/file/718358960022995",
+      "ardot_node_id": "3:27",
       "aspect_ratio": "1:1",
-      "display_px": "72-160",
-      "uses": ["sensing", "field-test", "popular-science"]
+      "display_px": "80-180",
+      "uses": ["popular-science", "sensing", "mapping", "competition"]
     },
     {
-      "id": "spot.robotic-arm-sample",
+      "id": "spot.hard-tech-autonomy",
       "kind": "spot",
-      "title": "Paper-cut robotic arm sampling scene",
-      "asset": "assets/library/cutout-paper/robotic-arm-sample.png",
-      "ardot_component_name": "组件｜插图｜纸雕机械臂取样",
+      "style": "hard-tech",
+      "title": "Hard-tech autonomy core",
+      "asset": "assets/library/cutout-hard-tech/autonomy-core.png",
+      "ardot_component_name": "组件｜硬核科技｜自主控制核心",
+      "ardot_file_url": "https://ardot.tencent.com/file/718358960022995",
+      "ardot_node_id": "3:30",
       "aspect_ratio": "1:1",
-      "display_px": "160-280",
-      "uses": ["event", "recruitment", "hardware", "sampling"]
+      "display_px": "80-180",
+      "uses": ["project-update", "popular-science", "control", "competition"]
     },
     {
-      "id": "spot.field-test-boat",
+      "id": "spot.mechanical-thruster",
       "kind": "spot",
-      "title": "Paper-cut field-test boat scene",
-      "asset": "assets/library/cutout-paper/field-test-boat.png",
-      "ardot_component_name": "组件｜插图｜纸雕外场测试船",
+      "style": "mechanical-industrial",
+      "title": "Mechanical thruster exploded view",
+      "asset": "assets/library/cutout-mechanical/thruster-exploded.png",
+      "ardot_component_name": "组件｜机械工业｜推进器爆炸结构",
+      "ardot_file_url": "https://ardot.tencent.com/file/718358960022995",
+      "ardot_node_id": "3:33",
       "aspect_ratio": "1:1",
-      "display_px": "160-320",
-      "uses": ["event", "field-test", "recruitment"]
+      "display_px": "96-220",
+      "uses": ["hardware-deep-dive", "popular-science", "training", "debugging"]
+    },
+    {
+      "id": "spot.mechanical-joint",
+      "kind": "spot",
+      "style": "mechanical-industrial",
+      "title": "Mechanical robotic arm joint",
+      "asset": "assets/library/cutout-mechanical/robotic-joint.png",
+      "ardot_component_name": "组件｜机械工业｜机械臂关节",
+      "ardot_file_url": "https://ardot.tencent.com/file/718358960022995",
+      "ardot_node_id": "3:36",
+      "aspect_ratio": "1:1",
+      "display_px": "96-220",
+      "uses": ["hardware-deep-dive", "project-update", "training", "sampling"]
+    },
+    {
+      "id": "spot.mechanical-tether",
+      "kind": "spot",
+      "style": "mechanical-industrial",
+      "title": "Mechanical ROV tether reel",
+      "asset": "assets/library/cutout-mechanical/tether-reel.png",
+      "ardot_component_name": "组件｜机械工业｜ROV缆绳绞盘",
+      "ardot_file_url": "https://ardot.tencent.com/file/718358960022995",
+      "ardot_node_id": "3:39",
+      "aspect_ratio": "1:1",
+      "display_px": "96-220",
+      "uses": ["field-test", "hardware-deep-dive", "project-update", "operations"]
     },
     {
       "id": "block.key-takeaway",
@@ -198,29 +313,37 @@
   "recommendations": {
     "popular-science": [
       "brand.logo",
-      "spot.sonar-fish",
-      "spot.auv-glider",
-      "spot.smart-buoy",
+      "spot.sonar-rov",
+      "spot.auv",
+      "spot.hard-tech-sonar",
+      "spot.hard-tech-autonomy",
+      "spot.mechanical-thruster",
       "block.key-takeaway",
       "block.robot-spec",
-      "block.references"
+      "block.references",
+      "spot.wave"
     ],
     "project-update": [
       "brand.logo",
-      "spot.thruster-tools",
-      "spot.auv-glider",
-      "spot.smart-buoy",
+      "spot.thruster",
+      "spot.auv",
+      "spot.hard-tech-rov",
+      "spot.hard-tech-autonomy",
+      "spot.mechanical-joint",
+      "spot.mechanical-tether",
       "block.metrics",
       "block.timeline",
-      "block.quote"
+      "block.quote",
+      "spot.wave"
     ],
     "recruitment": [
       "brand.logo",
+      "spot.wave",
+      "spot.sonar-rov",
+      "spot.thruster",
       "spot.bubble-rov",
       "spot.thruster-tools",
       "spot.sonar-fish",
-      "spot.robotic-arm-sample",
-      "spot.field-test-boat",
       "layout.hero-collage",
       "layout.open-text",
       "layout.floating-heading",
@@ -234,11 +357,32 @@
     ],
     "event": [
       "brand.logo",
-      "spot.robotic-arm-sample",
-      "spot.field-test-boat",
+      "spot.wave",
+      "spot.mechanical-tether",
       "block.key-takeaway",
       "block.timeline",
       "block.qr-footer"
+    ],
+    "hardware-deep-dive": [
+      "brand.logo",
+      "spot.mechanical-thruster",
+      "spot.mechanical-joint",
+      "spot.mechanical-tether",
+      "spot.hard-tech-autonomy",
+      "block.key-takeaway",
+      "block.robot-spec",
+      "block.references"
+    ],
+    "competition": [
+      "brand.logo",
+      "spot.hard-tech-rov",
+      "spot.hard-tech-sonar",
+      "spot.hard-tech-autonomy",
+      "spot.sonar-fish",
+      "layout.hero-collage",
+      "layout.swipe-gallery",
+      "block.metrics",
+      "block.timeline"
     ]
   }
 }

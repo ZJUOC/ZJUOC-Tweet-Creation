@@ -22,7 +22,7 @@ Before composing an article or generating an image, query the component registry
 
 ```bash
 python3 scripts/components.py list
-python3 scripts/components.py recommend popular-science
+python3 scripts/components.py recommend popular-science --style hard-tech
 python3 scripts/components.py show layout.swipe-gallery
 ```
 
@@ -44,7 +44,8 @@ Read [references/asset-library.md](references/asset-library.md) when adding, val
 - Generate a new image when the article has a subject-specific robot, event, experiment, or project that the current assets cannot represent.
 - Prefer text-free generated images. Add Chinese copy, labels, data, and the logo during deterministic layout so they remain accurate.
 - Treat cutout illustrations as compact spot assets: one readable subject group, a true-alpha PNG with transparent corners, and a 48-120 px default display size. The layout, not the bitmap, supplies any pale tile or paper background.
-- Choose one dominant illustration style per article. Use `watercolor-cutout` for friendly recruitment, `paper-cut` for events and field stories, `technical-line` for science and robot explanations, and `editorial-decor` only as supporting punctuation.
+- Choose one dominant illustration style per article. Use `watercolor-cutout` for friendly recruitment, `paper-cut` for events and field stories, `hard-tech` for competitions, autonomy, sensing, and research milestones, `mechanical-industrial` for hardware teardown, fabrication, repair, and training, `technical-line` for diagrams and precise explanations, and `editorial-decor` only as supporting punctuation.
+- Do not repeatedly mix `watercolor-cutout` with `hard-tech` or `mechanical-industrial` in one article. `technical-line` and `editorial-decor` may support any dominant family when kept sparse.
 - Use one small illustration per two to three content blocks. Do not decorate every heading or fill every gap.
 - In Ardot, apply each `spot.*` bitmap as the image fill of a reusable native component. Article layouts should use or copy the native component rather than placing loose image layers without a component identity.
 - Use real project facts only. Keep placeholders visibly labeled and remove them before a final deliverable.

@@ -12,8 +12,10 @@ plugins/ocean-robot-wechat/skills/ocean-robot-wechat/references/assets.json
 skill=plugins/ocean-robot-wechat/skills/ocean-robot-wechat
 python3 "$skill/scripts/assets.py" list
 python3 "$skill/scripts/assets.py" list --style technical-line
+python3 "$skill/scripts/assets.py" list --style hard-tech
 python3 "$skill/scripts/assets.py" search "ROV training"
-python3 "$skill/scripts/assets.py" recommend popular-science
+python3 "$skill/scripts/assets.py" search "机械 推进器 hardware-deep-dive"
+python3 "$skill/scripts/assets.py" recommend project-update --style hard-tech
 python3 "$skill/scripts/assets.py" validate
 ```
 
@@ -21,10 +23,14 @@ python3 "$skill/scripts/assets.py" validate
 
 - `cutout.watercolor.*`：水彩真透明 PNG。
 - `cutout.paper.*`：纸雕真透明 PNG。
+- `cutout.hard-tech.*`：硬核科技真透明 PNG，表达完成度、感知、自主与竞赛能力。
+- `cutout.mechanical.*`：机械工业真透明 PNG，表达结构、拆解、制造与运维。
 - `line.*`：技术线稿 SVG。
 - `decor.*`：编辑装饰 SVG。
 
 ID 一旦发布应保持稳定。文件路径可以迁移，但必须同步更新注册表。
+
+单篇推文只选一个主风格。`hard-tech` 用于呈现“这套系统能做什么”，`mechanical-industrial` 用于解释“它如何构成、连接、维修或操作”；技术线稿与编辑装饰可以少量辅助，但不要把水彩和工业组件随机混排。
 
 ## 新增透明切图
 
