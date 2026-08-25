@@ -72,6 +72,11 @@ Use these for a light, transparent technology treatment of sensing, navigation, 
 - `spot.aqua-glass-rov`: translucent ROV platform, robot profile and sensing carrier.
 - `spot.aqua-glass-sonar`: silver sonar module with a pale-aqua scanning fan.
 - `spot.aqua-glass-navigation`: AUV, three waypoints, route loop, and tethered surface buoy.
+- `spot.aqua-glass-current`: AUV with a connected S-shaped current trail; `motion` role.
+- `spot.aqua-glass-sampling`: manipulator holding a transparent sample capsule; `motion` role.
+- `spot.aqua-glass-relay`: surface buoy and ROV joined by a flowing tether; `connector` role.
+
+Query `scripts/components.py` with `--role anchor`, `--role motion`, or `--role connector` when the paragraph's action matters more than its noun. For placement and mobile fallback, read `lively-illustration.md`.
 
 ## Legacy large background assets
 

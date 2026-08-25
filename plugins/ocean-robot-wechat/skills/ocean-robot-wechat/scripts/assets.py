@@ -36,15 +36,18 @@ def emit(payload: Any) -> None:
 
 
 def compact(item: dict[str, Any]) -> dict[str, Any]:
-    return {key: item[key] for key in ("id", "title", "kind", "style", "path", "uses")}
+    keys = ("id", "title", "kind", "style", "path", "uses", "composition_role", "preferred_placement")
+    return {key: item[key] for key in keys if key in item}
 
 
-def list_assets(catalog: dict[str, Any], style: str | None, kind: str | None) -> None:
+def list_assets(catalog: dict[str, Any], style: str | None, kind: str | None, role: str | None) -> None:
     items = catalog["assets"]
     if style:
         items = [item for item in items if item["style"] == style]
     if kind:
         items = [item for item in items if item["kind"] == kind]
+    if role:
+        items = [item for item in items if item.get("composition_role") == role]
     emit([compact(item) for item in items])
 
 
@@ -52,7 +55,7 @@ def search_assets(catalog: dict[str, Any], query: str) -> None:
     tokens = [token.lower() for token in re.split(r"\s+", query.strip()) if token]
     ranked: list[tuple[int, dict[str, Any]]] = []
     for item in catalog["assets"]:
-        haystack = " ".join(str(value) for value in [item["id"], item["title"], item["kind"], item["style"], *item.get("subjects", []), *item.get("uses", [])]).lower()
+        haystack = " ".join(str(value) for value in [item["id"], item["title"], item["kind"], item["style"], item.get("composition_role", ""), *item.get("preferred_placement", []), *item.get("subjects", []), *item.get("uses", [])]).lower()
         score = sum(3 if token in item["id"].lower() else 1 for token in tokens if token in haystack)
         if score:
             ranked.append((score, item))
@@ -60,12 +63,14 @@ def search_assets(catalog: dict[str, Any], query: str) -> None:
     emit([compact(item) | {"score": score} for score, item in ranked])
 
 
-def recommend(catalog: dict[str, Any], article_type: str, style: str | None) -> None:
+def recommend(catalog: dict[str, Any], article_type: str, style: str | None, role: str | None) -> None:
     routes = catalog["style_routes"]
     styles = [style] if style else routes.get(article_type)
     if not styles:
         raise SystemExit(f"Unknown article type: {article_type}. Available: {', '.join(sorted(routes))}")
     items = [item for item in catalog["assets"] if item["style"] in styles and (article_type in item.get("uses", []) or "all" in item.get("uses", []))]
+    if role:
+        items = [item for item in items if item.get("composition_role") == role]
     emit({"article_type": article_type, "dominant_style": styles[0], "fallback_style": styles[1:] or None, "assets": [compact(item) for item in items]})
 
 
@@ -118,7 +123,7 @@ def preview(catalog: dict[str, Any], output: Path) -> None:
     cards = []
     for item in catalog["assets"]:
         uri = Path(os.path.relpath(ROOT / item["path"], output.parent)).as_posix()
-        tags = " ".join([item["style"], item["kind"], *item.get("subjects", []), *item.get("uses", [])])
+        tags = " ".join([item["style"], item["kind"], item.get("composition_role", ""), *item.get("preferred_placement", []), *item.get("subjects", []), *item.get("uses", [])])
         cards.append(f'''<article class="card" data-search="{escape(tags.lower())}" data-style="{escape(item['style'])}">
 <div class="art"><img src="{escape(uri)}" alt="{escape(item['title'])}"></div>
 <div class="meta"><span>{escape(STYLE_LABELS.get(item['style'], item['style']))}</span><h2>{escape(item['title'])}</h2><code>{escape(item['id'])}</code></div></article>''')
@@ -139,9 +144,9 @@ def preview(catalog: dict[str, Any], output: Path) -> None:
 def parser() -> argparse.ArgumentParser:
     root = argparse.ArgumentParser(description=__doc__)
     commands = root.add_subparsers(dest="command", required=True)
-    ls = commands.add_parser("list"); ls.add_argument("--style"); ls.add_argument("--kind")
+    ls = commands.add_parser("list"); ls.add_argument("--style"); ls.add_argument("--kind"); ls.add_argument("--role", choices=["anchor", "motion", "connector", "punctuation"])
     find = commands.add_parser("search"); find.add_argument("query")
-    rec = commands.add_parser("recommend"); rec.add_argument("article_type"); rec.add_argument("--style")
+    rec = commands.add_parser("recommend"); rec.add_argument("article_type"); rec.add_argument("--style"); rec.add_argument("--role", choices=["anchor", "motion", "connector", "punctuation"])
     commands.add_parser("validate")
     pre = commands.add_parser("preview"); pre.add_argument("--output", type=Path, required=True)
     return root
@@ -149,9 +154,9 @@ def parser() -> argparse.ArgumentParser:
 
 def main() -> None:
     args = parser().parse_args(); catalog = load_catalog()
-    if args.command == "list": list_assets(catalog, args.style, args.kind)
+    if args.command == "list": list_assets(catalog, args.style, args.kind, args.role)
     elif args.command == "search": search_assets(catalog, args.query)
-    elif args.command == "recommend": recommend(catalog, args.article_type, args.style)
+    elif args.command == "recommend": recommend(catalog, args.article_type, args.style, args.role)
     elif args.command == "validate": validate(catalog)
     elif args.command == "preview": preview(catalog, args.output)
 

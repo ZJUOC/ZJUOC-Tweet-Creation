@@ -7,7 +7,8 @@
     "mechanical-industrial": "3:19",
     "clay-miniature": "3:41",
     "isometric-system": "3:45",
-    "aqua-glass": "9:1"
+    "aqua-glass": "9:1",
+    "aqua-glass-motion": "45:1"
   },
   "components": {
     "spot.hard-tech-rov": "3:24",
@@ -24,6 +25,9 @@
     "spot.isometric-pool-workflow": "3:65",
     "spot.aqua-glass-rov": "9:6",
     "spot.aqua-glass-sonar": "9:9",
-    "spot.aqua-glass-navigation": "9:12"
+    "spot.aqua-glass-navigation": "9:12",
+    "spot.aqua-glass-current": "45:6",
+    "spot.aqua-glass-sampling": "45:9",
+    "spot.aqua-glass-relay": "45:12"
   }
 }

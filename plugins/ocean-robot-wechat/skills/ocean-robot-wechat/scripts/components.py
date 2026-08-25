@@ -27,13 +27,15 @@ def print_json(payload: Any) -> None:
 
 
 def list_components(
-    catalog: dict[str, Any], kind: str | None, style: str | None
+    catalog: dict[str, Any], kind: str | None, style: str | None, role: str | None
 ) -> None:
     components = catalog["components"]
     if kind:
         components = [item for item in components if item["kind"] == kind]
     if style:
         components = [item for item in components if item.get("style") == style]
+    if role:
+        components = [item for item in components if item.get("composition_role") == role]
     print_json(
         [
             {
@@ -42,6 +44,8 @@ def list_components(
                 "title": item["title"],
                 "style": item.get("style"),
                 "asset": item.get("asset"),
+                "composition_role": item.get("composition_role"),
+                "placement_modes": item.get("placement_modes"),
             }
             for item in components
         ]
@@ -56,7 +60,7 @@ def show_component(catalog: dict[str, Any], component_id: str) -> None:
 
 
 def recommend(
-    catalog: dict[str, Any], article_type: str, style: str | None
+    catalog: dict[str, Any], article_type: str, style: str | None, role: str | None
 ) -> None:
     recommendations = catalog["recommendations"]
     if article_type not in recommendations:
@@ -70,6 +74,13 @@ def recommend(
             for item in items
             if item["kind"] not in {"spot", "visual"}
             or item.get("style") == style
+        ]
+    if role:
+        items = [
+            item
+            for item in items
+            if item["kind"] not in {"spot", "visual"}
+            or item.get("composition_role") == role
         ]
     print_json(items)
 
@@ -120,6 +131,7 @@ def build_parser() -> argparse.ArgumentParser:
         "--kind", choices=["brand", "spot", "visual", "block", "layout"]
     )
     list_parser.add_argument("--style")
+    list_parser.add_argument("--role", choices=["anchor", "motion", "connector", "punctuation"])
 
     show_parser = subparsers.add_parser("show", help="Show one component")
     show_parser.add_argument("component_id")
@@ -129,6 +141,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     recommend_parser.add_argument("article_type")
     recommend_parser.add_argument("--style")
+    recommend_parser.add_argument("--role", choices=["anchor", "motion", "connector", "punctuation"])
     subparsers.add_parser("validate", help="Validate component references and assets")
     return parser
 
@@ -138,11 +151,11 @@ def main() -> None:
     catalog = load_catalog()
 
     if args.command == "list":
-        list_components(catalog, args.kind, args.style)
+        list_components(catalog, args.kind, args.style, args.role)
     elif args.command == "show":
         show_component(catalog, args.component_id)
     elif args.command == "recommend":
-        recommend(catalog, args.article_type, args.style)
+        recommend(catalog, args.article_type, args.style, args.role)
     elif args.command == "validate":
         validate(catalog)
 

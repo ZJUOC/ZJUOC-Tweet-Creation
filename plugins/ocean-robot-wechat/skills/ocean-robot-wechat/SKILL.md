@@ -36,6 +36,7 @@ python3 scripts/assets.py list --style technical-line
 
 Use the returned component IDs in the working notes and final artifact metadata. Prefer `spot.*` for small inline illustrations and reserve `visual.*` for large backgrounds. Read [references/component-catalog.md](references/component-catalog.md) when selecting or adapting a component. Read [references/visual-system.md](references/visual-system.md) when generating a new image or styling a complete article.
 Read [references/asset-library.md](references/asset-library.md) when adding, validating, or routing reusable imagery.
+Read [references/lively-illustration.md](references/lively-illustration.md) when the user asks for a lively or less containerized result, or when composing a long article that needs floating, bridging, or motion-led spot illustrations.
 
 ## Working rules
 
@@ -47,6 +48,8 @@ Read [references/asset-library.md](references/asset-library.md) when adding, val
 - Choose one dominant illustration style per article. Use `watercolor-cutout` for friendly recruitment, `clay-miniature` for hands-on recruitment, training, and laboratory stories, `paper-cut` for events and field stories, `hard-tech` for competitions, autonomy, sensing, and research milestones, `mechanical-industrial` for hardware teardown, fabrication, and repair, `isometric-system` for mission chains, system relationships, and test workflows, `aqua-glass` for sonar, navigation, data links, and future-facing perception, `technical-line` for diagrams and precise explanations, and `editorial-decor` only as supporting punctuation.
 - Do not repeatedly mix tactile families (`watercolor-cutout`, `paper-cut`, `clay-miniature`) with engineering-render families (`hard-tech`, `mechanical-industrial`, `isometric-system`, `aqua-glass`) in one article. `technical-line` and `editorial-decor` may support any dominant family when kept sparse.
 - Use one small illustration per two to three content blocks. Do not decorate every heading or fill every gap.
+- Infer a spot illustration's composition role before placement: use `anchor` for a named platform or metric, `motion` for an action or change, `connector` for a relationship, and `punctuation` for a light pause. Query `assets.py` or `components.py` with `--role` instead of choosing by subject alone.
+- Place transparent components directly into open layout space. Alternate `heading-float`, `edge-float`, `section-transition`, `section-bridge`, `open-text-overlap`, and `vertical-margin` placements; library showcase cards are not article containers.
 - In Ardot, apply each `spot.*` bitmap as the image fill of a reusable native component. Article layouts should use or copy the native component rather than placing loose image layers without a component identity.
 - Use real project facts only. Keep placeholders visibly labeled and remove them before a final deliverable.
 - Treat the dark blue in the supplied logo as protected logo artwork only. Never sample it for fills, outlines, text, shadows, or large background areas.

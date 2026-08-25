@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
@@ -50,8 +51,11 @@ def render(output: Path) -> None:
     width = 1600
     margin = 80
     gap = 30
-    group_h = 430
-    height = 150 + len(groups) * group_h + 50
+    group_heights = {
+        style: 110 + max(1, math.ceil(len(items) / 3)) * 320
+        for style, items in groups.items()
+    }
+    height = 150 + sum(group_heights.values()) + 50
     board = Image.new("RGB", (width, height), "#F7FBFA")
     draw = ImageDraw.Draw(board)
     draw.text((margin, 45), "水机 AI 素材库 · 多风格组件", fill="#2E4148", font=font(46, True))
@@ -60,24 +64,29 @@ def render(output: Path) -> None:
     y = 150
     for index, (style, (label, description)) in enumerate(STYLE_LABELS.items()):
         items = groups[style]
+        group_h = group_heights[style]
         draw.rounded_rectangle((margin, y, width - margin, y + group_h - 24), radius=28, fill="#FFFFFF", outline="#DCECED", width=2)
         draw.text((margin + 34, y + 28), label, fill="#2E4148", font=font(32, True))
         draw.text((margin + 220, y + 36), description, fill="#667A80", font=font(20))
         card_y = y + 92
-        card_w = (width - 2 * margin - 68 - max(0, len(items) - 1) * gap) // max(1, len(items))
+        column_count = min(3, max(1, len(items)))
+        card_w = (width - 2 * margin - 68 - (column_count - 1) * gap) // column_count
         for item_index, item in enumerate(items):
-            x = margin + 34 + item_index * (card_w + gap)
+            column = item_index % 3
+            row = item_index // 3
+            x = margin + 34 + column * (card_w + gap)
+            item_y = card_y + row * 320
             art_h = 235
             bg = BACKGROUNDS[(index + item_index) % len(BACKGROUNDS)]
-            draw.rounded_rectangle((x, card_y, x + card_w, card_y + art_h), radius=22, fill=bg)
+            draw.rounded_rectangle((x, item_y, x + card_w, item_y + art_h), radius=22, fill=bg)
             with Image.open(ROOT / item["path"]) as source:
                 art = contain(source.convert("RGBA"), (card_w - 34, art_h - 28))
             px = x + (card_w - art.width) // 2
-            py = card_y + (art_h - art.height) // 2
+            py = item_y + (art_h - art.height) // 2
             board.paste(art, (px, py), art)
             title = item["title"].replace(label, "").strip()
-            draw.text((x + 4, card_y + art_h + 17), title, fill="#2E4148", font=font(21, True))
-            draw.text((x + 4, card_y + art_h + 51), item["id"], fill="#7A9095", font=font(14))
+            draw.text((x + 4, item_y + art_h + 17), title, fill="#2E4148", font=font(21, True))
+            draw.text((x + 4, item_y + art_h + 51), item["id"], fill="#7A9095", font=font(14))
         y += group_h
 
     output.parent.mkdir(parents=True, exist_ok=True)

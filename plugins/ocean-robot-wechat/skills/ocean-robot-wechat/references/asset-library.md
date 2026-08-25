@@ -7,8 +7,9 @@
 1. Search by topic and use: `python3 scripts/assets.py search "ROV training"`.
 2. Ask for an article-type route: `python3 scripts/assets.py recommend recruitment`.
 3. Keep the returned `dominant_style` for the full article.
-4. Generate only when no registered asset represents the subject or action.
-5. Register approved additions in `assets.json`, create or update their native Ardot component, then run validation.
+4. Infer `composition_role` (`anchor`, `motion`, `connector`, or `punctuation`) and filter again when the paragraph needs a specific visual gesture.
+5. Generate only when no registered asset represents the subject, action, and composition role.
+6. Register approved additions in `assets.json`, create or update their native Ardot component, then run validation.
 
 ## Style routing
 
@@ -40,6 +41,8 @@ Preferred flow:
 ## Metadata requirements
 
 Every new entry requires `id`, `title`, `kind`, `style`, `path`, `subjects`, and `uses`. Raster cutouts also require `alpha_required: true` and a `source` field. Do not use generated Chinese copy or regenerated association logos inside any asset.
+
+For spot illustrations, also record `composition_role` and one or more `preferred_placement` values so AI selection can consider the paragraph's visual function rather than only its topic.
 
 ## Frequency and layout
 
