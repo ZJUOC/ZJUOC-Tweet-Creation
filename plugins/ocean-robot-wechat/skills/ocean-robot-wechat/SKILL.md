@@ -79,4 +79,8 @@ python3 scripts/assets.py validate
 
 The compiler creates `index.html`, `wechat.html`, and `compile-report.json`. `wechat.html` uses inline styles, contains no scripts, preserves horizontal swipe behavior, and keeps component IDs as `data-component` attributes. Treat a failed `--check` as a blocking QA issue.
 
+For a denser editorial composition, use the rich block family demonstrated in `examples/recruitment-2026-lively-rich`: `hero_rich`, `manifesto_rich`, `heading_rich`, `story_collage`, `path_rich`, `swipe_gallery_rich`, `bridge_rich`, `departments_rich`, and `join_rich`. These blocks are intentionally asymmetrical, image-led, and script-free. Keep their text and media fields structured in `article.json`; do not flatten them into one poster image.
+
+When the deliverable also needs an A4 recruitment handout, start from `examples/recruitment-2026-a4-poster`. Preserve the user-supplied QR images, use registered association cutouts, and rebuild both the 300 dpi PNG and print-ready PDF from the deterministic script.
+
 For official-account delivery, create a draft first. Upload content images and the cover through the configured publisher MCP, replace local image paths with returned WeChat CDN URLs, then create the draft idempotently. Never submit formal publication without a separate explicit confirmation. Do not generate or replace QR codes; use only the user-provided QR assets.

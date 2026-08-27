@@ -37,6 +37,21 @@ class CompileWechatTests(unittest.TestCase):
         )
         self.assertTrue(any("deep blue" in item for item in errors))
 
+    def test_rich_swipe_is_script_free_and_reveals_next_slide(self) -> None:
+        block = {
+            "type": "swipe_gallery_rich",
+            "component": "layout.swipe-gallery-rich",
+            "images": [
+                {"src": "a.jpg", "alt": "A", "caption": "甲"},
+                {"src": "b.jpg", "alt": "B", "caption": "乙"},
+            ],
+        }
+        result = compile_wechat.render_block(block)
+        self.assertIn("overflow-x:auto", result)
+        self.assertIn("width:88%", result)
+        self.assertIn("左右滑动", result)
+        self.assertNotIn("<script", result)
+
     def test_complete_minimal_article_passes(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

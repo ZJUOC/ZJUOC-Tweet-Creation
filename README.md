@@ -12,6 +12,8 @@
 - 按招新、活动、科普、项目进展自动选择一套主视觉风格。
 - 在 Ardot 中保留原生文本、图片填充、变量和可复用组件。
 - 输出手机预览版 `index.html` 和可粘贴到公众号编辑器的 `wechat.html`。
+- 使用 9 类非对称富排版区块组织主视觉、故事拼贴、路径、桥接、滑动画廊、部门与报名区。
+- 从同一套 Logo、照片、二维码和注册素材生成 300 dpi A4 纳新宣传单。
 - 自动检查深蓝违规、透明 PNG、缺失素材、滑动图库和组件 ID。
 - 可选连接微信公众号 API，只创建草稿；正式发布仍需单独确认。
 
@@ -145,6 +147,8 @@ plugins/ocean-robot-wechat/               可安装插件
   mcp/wechat-publisher-mcp/                可选草稿发布服务
   assets/chrome-extension/                 公众号编辑器导入桥接
 examples/recruitment-2026-lively/          完整示例推文
+examples/recruitment-2026-lively-rich/     20 组件灵动丰富版推文
+examples/recruitment-2026-a4-poster/       可复现的双二维码 A4 海报
 examples/asset-library/                    基础素材检索预览
 examples/asset-library-multistyle/         多风格分类预览与 Ardot 节点映射
 docs/                                      维护文档

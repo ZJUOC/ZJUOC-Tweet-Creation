@@ -43,6 +43,8 @@ Ardot 是可编辑设计源。使用原生 Frame、Text、变量、图片 Fill �
 python3 scripts/compile_wechat.py article.json --output output --check
 ```
 
+需要更灵动、紧凑的版式时，优先使用富排版区块：`hero_rich`、`manifesto_rich`、`heading_rich`、`story_collage`、`path_rich`、`swipe_gallery_rich`、`bridge_rich`、`departments_rich` 与 `join_rich`。它们通过不对称留白、边缘切图、图片叠放和露出下一屏的滑动区建立节奏，不依赖 JavaScript。
+
 ## 6. QA 闸门
 
 交付前必须通过：
@@ -63,3 +65,7 @@ python3 scripts/compile_wechat.py article.json --output output --check
 ## 8. 新素材回流
 
 通过 QA 的新素材加入 `references/assets.json`，记录稳定 ID、主题、风格、用途、路径和来源；随后创建 Ardot 可复用组件。这样下一篇文章可以直接检索复用。
+
+## 9. A4 海报衍生
+
+当同一活动需要线下宣传单时，以 `examples/recruitment-2026-a4-poster` 为起点复用文章事实、协会 Logo、已注册切图和用户提供的二维码。海报脚本输出 300 dpi PNG 与印刷 PDF；二维码只允许裁切和等比缩放，不生成、不美化、不替换。
