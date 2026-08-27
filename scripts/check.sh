@@ -18,12 +18,15 @@ fi
 
 skill_root="$repo_root/plugins/ocean-robot-wechat/skills/ocean-robot-wechat"
 example_root="$repo_root/examples/recruitment-2026-lively"
+rich_example_root="$repo_root/examples/recruitment-2026-lively-rich"
 
 "$python_bin" "$repo_root/scripts/validate_package.py"
 "$python_bin" "$skill_root/scripts/assets.py" validate
 "$python_bin" -m unittest discover -s "$skill_root/tests" -v
 "$python_bin" "$skill_root/scripts/compile_wechat.py" \
   "$example_root/article.json" --output "$example_root" --check
+"$python_bin" "$skill_root/scripts/compile_wechat.py" \
+  "$rich_example_root/article.json" --output "$rich_example_root" --check
 
 if command -v uv >/dev/null 2>&1; then
   publisher_root="$repo_root/plugins/ocean-robot-wechat/mcp/wechat-publisher-mcp"

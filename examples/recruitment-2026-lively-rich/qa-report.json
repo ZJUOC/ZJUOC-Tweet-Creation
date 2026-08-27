@@ -1,0 +1,26 @@
+{
+  "status": "pass",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "article_height": 6042,
+  "component_count": 20,
+  "swipe_gallery_count": 2,
+  "image_count": 24,
+  "broken_images": 0,
+  "deep_blue_outside_logo": false,
+  "checks": {
+    "hero_legibility": "pass",
+    "body_text_size": "pass",
+    "photo_cropping": "pass",
+    "intentional_overlap_only": "pass",
+    "qr_visibility": "pass",
+    "wechat_inline_style_only": "pass"
+  },
+  "notes": [
+    "Two galleries intentionally use horizontal overflow for swipe behavior.",
+    "Edge-floating component overlaps and offset photo overlaps are intentional composition devices.",
+    "Ardot file and node IDs are recorded in ardot-component-map.json for editable-source comparison."
+  ]
+}

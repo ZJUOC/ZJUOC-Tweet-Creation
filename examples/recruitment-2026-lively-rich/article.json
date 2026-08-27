@@ -1,0 +1,194 @@
+{
+  "title": "把奇思妙想，做成真正下水的机器人｜灵动丰富版",
+  "article_type": "recruitment",
+  "source_url": "https://mp.weixin.qq.com/s/yT58Dhiq4AgWW8Sy5H-P8w",
+  "blocks": [
+    {
+      "type": "hero_rich",
+      "component": "layout.hero-rich",
+      "eyebrow": "ZJU OCEAN ROBOT ASSOCIATION",
+      "kicker": "2026 · 纳新开启",
+      "title": "把奇思妙想，做成真正下水的机器人",
+      "subtitle": "从第一颗螺丝、第一行代码开始，把好奇心一路带到水池、赛场和真实海洋工程。",
+      "tags": ["不限年级", "不限专业", "不要求基础"],
+      "logo": "assets/association-logo.jpg",
+      "images": [
+        {"src": "assets/generated/rich-hero-background.png", "alt": "浅冰蓝水下机器人测试场景主视觉"},
+        {"src": "assets/generated/aqua-current-auv.png", "alt": "冰蓝透明洋流追踪 AUV 插图"}
+      ]
+    },
+    {
+      "type": "manifesto_rich",
+      "component": "layout.manifesto-rich",
+      "eyebrow": "WHO WE ARE · 我们是谁",
+      "lead": "不是围观机器人，而是亲手让它动起来。",
+      "paragraphs": [
+        "浙江大学学生海洋机器人协会成立于 2023 年 12 月，是面向全校学生的学术科技类社团。",
+        "我们关心一张图纸怎样变成真实结构、一段代码怎样驱动设备，以及一支队伍怎样把机器人安全送进水里。"
+      ],
+      "facts": [
+        {"value": "120+", "label": "在会成员"},
+        {"value": "3", "label": "核心技术方向"},
+        {"value": "0", "label": "基础门槛"}
+      ]
+    },
+    {
+      "type": "heading_rich",
+      "component": "layout.heading-rich",
+      "number": "01 · LEARN",
+      "title": "从零基础，到独立设计",
+      "rotate": "-5deg",
+      "image": {"src": "assets/generated/aqua-current-auv.png", "alt": "冰蓝透明 AUV 从标题边缘穿过"}
+    },
+    {
+      "type": "text",
+      "component": "layout.open-text",
+      "paragraphs": [
+        "协会提供覆盖算法、电控与结构的机器人设计内训。从基础知识出发，逐步进入方案设计、硬件连接、控制调试和整机联调。",
+        "没有基础不是门槛，愿意学习、愿意动手，才是真正的起点。"
+      ]
+    },
+    {
+      "type": "path_rich",
+      "component": "block.learning-current",
+      "items": ["基础内训", "分组实践", "项目设计", "整机联调", "下水测试"]
+    },
+    {
+      "type": "story_collage",
+      "component": "layout.story-collage",
+      "label": "LEARNING IN ACTION",
+      "images": [
+        {"src": "assets/original/original-24.jpg", "alt": "协会内训课堂"},
+        {"src": "assets/original/original-60.jpg", "alt": "实验室里的机器人调试"}
+      ],
+      "caption": "从讲清一个原理，到亲手排查一根线：知识在真实设备上才算闭环。"
+    },
+    {
+      "type": "swipe_gallery_rich",
+      "component": "layout.swipe-gallery-rich",
+      "label": "内训现场 · SWIPE",
+      "images": [
+        {"src": "assets/original/original-24.jpg", "alt": "协会内训课堂", "caption": "把概念拆成能动手的步骤。"},
+        {"src": "assets/original/original-25.jpg", "alt": "协会成员课堂交流", "caption": "在讲解和讨论中找到自己的技术方向。"},
+        {"src": "assets/original/original-60.jpg", "alt": "实验室机器人调试", "caption": "连接、调参、排错，再把问题带回图纸。"}
+      ]
+    },
+    {
+      "type": "bridge_rich",
+      "component": "spot.aqua-glass-relay",
+      "align": "right",
+      "label": "FROM CLASS TO WATER",
+      "title": "学会之后，下一站是水池。",
+      "text": "让算法、电路和结构第一次在同一台机器上说得上话。",
+      "image": {"src": "assets/generated/aqua-data-relay.png", "alt": "冰蓝透明水面数据中继插图"}
+    },
+    {
+      "type": "heading_rich",
+      "component": "layout.heading-rich",
+      "number": "02 · BUILD",
+      "title": "把机器人送进水里，也送上赛场",
+      "rotate": "5deg",
+      "image": {"src": "assets/generated/aqua-sampling-arm.png", "alt": "冰蓝透明机械臂取样插图"}
+    },
+    {
+      "type": "text",
+      "component": "layout.open-text",
+      "paragraphs": [
+        "一台水下机器人，需要机械结构、电子系统、感知算法和控制策略共同工作。协会提供自主工程实践与竞赛机会，让想法不只停在纸面。",
+        "从需求分析到比赛复盘，你会经历一件真实作品被完整做出来的过程。奖项是结果，工程能力与队友默契才是留在手里的东西。"
+      ]
+    },
+    {
+      "type": "swipe_gallery_rich",
+      "component": "layout.swipe-gallery-rich",
+      "label": "比赛与项目 · SWIPE",
+      "images": [
+        {"src": "assets/original/original-18.jpg", "alt": "竞赛获奖队伍合影", "caption": "浙江省大学生机器人竞赛水下赛道。"},
+        {"src": "assets/original/original-33.jpg", "alt": "全国海洋航行器大赛队伍", "caption": "全国海洋航行器设计与制作大赛。"},
+        {"src": "assets/original/original-17.jpg", "alt": "RoboCup 比赛机器人", "caption": "中国机器人大赛暨 RoboCup 中国赛。"}
+      ]
+    },
+    {
+      "type": "bridge_rich",
+      "component": "spot.aqua-glass-rov",
+      "align": "left",
+      "label": "ENGINEERING MOMENT",
+      "title": "入水那一刻，所有细节都会回答你。",
+      "text": "能不能密封、能不能通信、能不能稳定控制——答案都在水里。",
+      "image": {"src": "assets/generated/aqua-transparent-rov.png", "alt": "冰蓝透明 ROV 插图"}
+    },
+    {
+      "type": "heading_rich",
+      "component": "layout.heading-rich",
+      "number": "03 · TOGETHER",
+      "title": "不止有技术，也有一起做事的人",
+      "rotate": "-3deg",
+      "image": {"src": "assets/generated/aqua-data-relay.png", "alt": "冰蓝透明水面中继连接团队章节"}
+    },
+    {
+      "type": "story_collage",
+      "component": "layout.story-collage",
+      "label": "TEAM SIDE QUEST",
+      "images": [
+        {"src": "assets/original/original-39.jpg", "alt": "协会成员聚餐合影"},
+        {"src": "assets/original/original-47.png", "alt": "启真湖机器人打捞现场"}
+      ],
+      "caption": "一起熬过联调，也一起把机器人从启真湖里“体面接回家”。"
+    },
+    {
+      "type": "heading_rich",
+      "component": "layout.heading-rich",
+      "number": "04 · CHOOSE",
+      "title": "四个方向，总有一个适合你",
+      "rotate": "4deg",
+      "image": {"src": "assets/generated/aqua-sampling-arm.png", "alt": "冰蓝透明机械臂连接部门章节"}
+    },
+    {
+      "type": "departments_rich",
+      "component": "layout.department-river-rich",
+      "items": [
+        {"name": "宣传运营部", "description": "运营公众号与小红书，记录活动与比赛，完成海报、易拉宝等视觉物料。"},
+        {"name": "项目组织部", "description": "组织学生自主工程实践，把创意转成项目，并策划志愿服务与团建交流。"},
+        {"name": "外联合作部", "description": "连接科技社团、指导教师与企业，发掘项目机会并争取资源支持。"},
+        {"name": "顾问团", "description": "由往届参赛成员组成，在备赛期间开展专项辅导和经验分享。"}
+      ]
+    },
+    {
+      "type": "heading_rich",
+      "component": "layout.heading-rich",
+      "number": "05 · JOIN",
+      "title": "年级不限，专业不限，基础不限",
+      "rotate": "-4deg",
+      "image": {"src": "assets/generated/aqua-transparent-rov.png", "alt": "冰蓝透明 ROV 欢迎加入"}
+    },
+    {
+      "type": "text",
+      "component": "layout.open-text",
+      "paragraphs": [
+        "只要你对智能硬件、具身智能、电子信息、自动化控制、机械设计或嵌入式开发中的任一方向感兴趣，都欢迎加入。",
+        "你可以从第一节内训开始，也可以直接加入适合自己的项目方向。"
+      ]
+    },
+    {
+      "type": "join_rich",
+      "component": "layout.join-current-rich",
+      "title": "带着好奇来，带着真正下过水的作品离开。",
+      "image": {"src": "assets/generated/aqua-transparent-rov.png", "alt": "冰蓝透明 ROV 招新锚点插图"},
+      "steps": [
+        "扫描问卷二维码，填写纳新信息。",
+        "加入 2026–2027 海洋机器人协会纳新群。",
+        "关注 ZJUORA 微信公众号，获取后续通知。"
+      ],
+      "qrs": [
+        {"src": "assets/original/original-78.jpg", "alt": "纳新问卷二维码", "caption": "纳新问卷"},
+        {"src": "assets/original/original-77.png", "alt": "纳新群二维码", "caption": "纳新群"}
+      ]
+    },
+    {
+      "type": "footer",
+      "component": "brand.logo",
+      "logo": "assets/association-logo.jpg",
+      "credits": "文案：吴柏杨 · 排版：郑秋诺 · 审核：张钦宇、蔡博恒、周子涵 · 责任编辑：吴柏杨"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "name": "ocean-robot-wechat",
-  "version": "0.7.0",
-  "description": "Ardot-first WeChat article system for the Zhejiang University Ocean Robot Association, with an AI-searchable visual asset library, lively components, deterministic HTML compilation, and draft publishing.",
+  "version": "0.8.0",
+  "description": "Ardot-first WeChat article system for the Zhejiang University Ocean Robot Association, with searchable visual assets, rich editorial components, deterministic HTML, poster generation, and draft publishing.",
   "author": {
     "name": "ZJU Ocean Robot Association"
   },
@@ -17,6 +17,7 @@
       "AI-searchable water-robot asset library",
       "WeChat-safe HTML",
       "Lively component registry",
+      "A4 poster generator",
       "Draft publishing MCP"
     ],
     "brandColor": "#8CCCD3",
