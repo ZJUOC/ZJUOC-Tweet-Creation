@@ -1,6 +1,8 @@
 # ZJUOC Tweet Creation
 
-浙江大学学生海洋机器人协会的 AI 原生微信公众号内容工作流。仓库可直接作为 Codex Marketplace 安装，包含 Ardot 原生排版、可检索水机素材库、微信安全 HTML 编译、浏览器导入桥接和可选的公众号草稿 MCP。
+[![Install with skills](https://skills.sh/b/zjuoc/zjuoc-tweet-creation/ocean-robot-wechat)](https://skills.sh/zjuoc/zjuoc-tweet-creation/ocean-robot-wechat)
+
+浙江大学学生海洋机器人协会的 AI 原生微信公众号内容工作流。技能可通过 [`npx skills`](https://skills.sh/) 安装到 Claude Code、Cursor、Codex、OpenCode 等助手，也可作为 Codex Marketplace 插件安装。包含 Ardot 原生排版、可检索水机素材库、微信安全 HTML 编译、浏览器导入桥接和可选的公众号草稿 MCP。
 
 ![水机多风格组件素材](examples/asset-library-multistyle/style-board.jpg)
 
@@ -14,6 +16,38 @@
 - 可选连接微信公众号 API，只创建草稿；正式发布仍需单独确认。
 
 ## 快速安装
+
+### 跨助手（推荐）
+
+仓库是公开 GitHub 技能源。任意支持 [Agent Skills](https://agentskills.io) 的助手都可以用 Skills CLI 安装：
+
+```bash
+npx skills add ZJUOC/ZJUOC-Tweet-Creation@ocean-robot-wechat
+```
+
+全局安装到本机已检测到的助手：
+
+```bash
+npx skills add ZJUOC/ZJUOC-Tweet-Creation@ocean-robot-wechat -g -y
+```
+
+只列出、不安装：
+
+```bash
+npx skills add ZJUOC/ZJUOC-Tweet-Creation --list
+```
+
+目录页：https://skills.sh/zjuoc/zjuoc-tweet-creation/ocean-robot-wechat
+
+Oh My Pi / OMP 不会被 Skills CLI 自动写入。全局安装后再链一次：
+
+```bash
+ln -sfn ~/.agents/skills/ocean-robot-wechat ~/.omp/agent/skills/ocean-robot-wechat
+```
+
+然后开一个新会话。
+
+### Codex Marketplace
 
 需要安装 [Codex](https://openai.com/codex/) 和 Git。
 
@@ -104,6 +138,7 @@ plugins/ocean-robot-wechat/scripts/launch-wechat-publisher-mcp
 ## 仓库结构
 
 ```text
+skills/ocean-robot-wechat                 npx skills / skills.sh 入口（符号链接）
 .agents/plugins/marketplace.json          Codex Marketplace
 plugins/ocean-robot-wechat/               可安装插件
   skills/ocean-robot-wechat/              AI 工作流、素材、编译器与测试

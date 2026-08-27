@@ -24,8 +24,16 @@ def main() -> None:
 
     if manifest.get("name") != PLUGIN.name:
         errors.append("plugin folder and manifest name differ")
-    if not (PLUGIN / "skills" / "ocean-robot-wechat" / "SKILL.md").exists():
+    plugin_skill = PLUGIN / "skills" / "ocean-robot-wechat"
+    canonical_skill = ROOT / "skills" / "ocean-robot-wechat"
+    if not (plugin_skill / "SKILL.md").exists():
         errors.append("plugin skill entrypoint is missing")
+    if not canonical_skill.is_symlink():
+        errors.append("skills/ocean-robot-wechat must be a symlink for npx skills discovery")
+    elif canonical_skill.resolve() != plugin_skill.resolve():
+        errors.append("skills/ocean-robot-wechat must resolve to the plugin skill directory")
+    elif not (canonical_skill / "SKILL.md").exists():
+        errors.append("canonical skills/ocean-robot-wechat/SKILL.md is missing")
     if manifest.get("mcpServers") and not (PLUGIN / manifest["mcpServers"]).resolve().exists():
         errors.append("plugin mcpServers path is missing")
     entries = {item["name"]: item for item in marketplace.get("plugins", [])}

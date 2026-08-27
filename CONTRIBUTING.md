@@ -13,6 +13,10 @@
 
 示例目录至少包含 `article.json`、所需素材、`index.html`、`wechat.html` 和 `compile-report.json`。不要提交真实 AppSecret、访问令牌、私有群二维码或未获授权的内部照片。
 
+## 技能发现路径
+
+`skills/ocean-robot-wechat` 是插件技能目录的符号链接，给 `npx skills add` 和 [skills.sh](https://skills.sh/) 用。技能正文、素材和脚本只维护在 `plugins/ocean-robot-wechat/skills/ocean-robot-wechat/`。不要把内容复制到仓库根 `skills/`。
+
 ## 提交前
 
 ```bash
